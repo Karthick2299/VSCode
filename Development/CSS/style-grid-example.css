@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height:100vh;
+    background: #ccc;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    display: grid;
+    /* grid-template-columns: [col-1-start] 1fr [content-start] 2fr [content-end] 1fr [col-1-end];
+    grid-template-rows: [row-1-start] 1rem [row-2-start] minmax(10px, 200px) [row-3-start] 300px; */
+
+    /* grid-template-columns: [column-1-start] 1fr [col-mid-1] minmax(1000px, 800px) [col-mid-2] 3fr [col-end];/* only three columns are affected
+    grid-template-rows: [row-start] 2fr [row-mid-1] minmax(100px, 500px) [row-mid-2] 1fr [row-end]; */
+
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "main main . side"
+    "footer footer footer footer";
+}
+.el1{
+    background: tomato;
+    /* grid-row-start: row-1-start;
+    grid-row-end: row-3-start; */
+    
+    
+}
+.el2{
+    background: rgb(211, 149, 255);
+    /* grid-column-start: col-1-start;
+    grid-column-end: content-end; */
+
+}
+.el3{
+    background: rgb(103, 225, 255);
+    /* grid-column-start: column-1-start;
+    grid-column-end: col-mid-2; */
+
+    /* shorthand property of grid column start and end */
+
+    /* grid-column:column-1-start / col-mid-2;
+
+    grid-row-start: row-start;
+    grid-row-end: row-mid-1; */
+}
+.el4{
+    background: lightgreen;
+}

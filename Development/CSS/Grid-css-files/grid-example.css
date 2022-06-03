@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    font-size:2rem;
+    text-align: center;
+}
+body{
+    width:100vw;
+    height:100vh;
+    background: lightgreen;
+   
+}
+.container{
+    padding:16px;
+    width:50vw;
+    height:60vh;
+    background-color: rgb(254, 254, 254);
+    display: grid;
+    gap:0.5rem;
+    grid-auto-flow: column dense;
+    /* grid-template-areas: "example example example  "
+                        "middle middle . "; */
+
+    /* justify-content:space-evenly;
+    align-content: space-around; */
+
+    /*shorthand property*/
+    /* place-content: space-evenly; */
+
+    /* grid-auto-rows:300px; */
+                        
+    /* justify-items: stretch; -> default value */
+    /* grid-row-gap:10px;
+    grid-column-gap:10px; */
+    /* justify-items: start;
+    align-items: start; */
+    /*shorthand property*/
+    /* place-items: center; */
+    /* grid-gap:10px; */
+    /* overflow: hidden; */
+    /* grid-template-rows: [karthick-1] 100px [karthick-2] 100px 100px 100px 100px 100px [ending-sequence];
+    grid-template-columns: repeat(2, 1fr) ; */
+    /* justify-content: center;*/
+    /* grid-template-columns: auto auto auto;
+    text-align:center;
+    padding:2rem;
+    grid-gap:2rem;
+    margin:auto; */
+     /* grid-auto-rows:50px;
+    grid-auto-columns: 1000px;  */
+} 
+
+.sub-container1{
+    background: rgb(255, 124, 255);
+    border:2px solid black; 
+    /* grid-area: header; */
+    /* grid-column-start: 1;
+    grid-column-end: 6; */
+
+    /* grid-column-start: 5;
+    grid-column-end: span 2;
+    grid-auto-flow: row; */
+    /* grid-row-start: 1;
+    grid-row-end: span 2; 
+    */
+}
+.sub-container2{
+    background: indigo;
+    border:2px solid black;
+   
+    /* grid-area:middle; */
+   /* height:1000px; */
+   /* grid-area: footer; */
+    
+}
+.sub-container3{
+    background: rgb(255, 79, 79);
+    border:2px solid black;
+    /* grid-area: example; */
+    
+}
+.sub-container4{
+    background: rgb(116, 121, 255);
+    border:2px solid black;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    
+}
+.sub-container5{
+    background: rgb(255, 0, 0);
+
+    
+}
+.sub-container6{
+    background: rgb(0, 106, 48);
+    
+    
+} 

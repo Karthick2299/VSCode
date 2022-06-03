@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    
+    background-color: #ccc;
+    
+}
+/* img{
+   
+   height:100vh;
+   width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.toggle-main{
+    width:10%;
+    height:10%;
+    background: rgb(239, 66, 95);
+    overflow: hidden;
+
+}
+
+.toggle-bar{
+    width:50%;
+    background: #000;
+    height:16px;
+    margin:0.5rem;
+    padding:0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} */
+
+ .backdrop{
+    width:100vw;
+    height:100vh;
+    background: url("../Images/bus.jpg");
+    filter: blur(10px);
+    position:fixed;
+    overflow: hidden;
+    display: none;
+}
+
+.backdrop-display{
+    display: block ;
+}

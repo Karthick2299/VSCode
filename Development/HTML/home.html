@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style-home.css">
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button class="add">Add Color</button>
+    <button class="remove">remove</button>
+
+
+    <div class="container1" style="width: 100px;">
+
+        <h2>Content</h2>
+        <p>paragraph</p>
+
+    </div>
+
+    <div class="container1">
+        test
+    </div>
+
+    <script>
+        // obj.className = 
+        var container = document.querySelectorAll('.container1');
+        // console.log( container );
+        // console.log( container.style.width );
+        var addBtn = document.querySelector('.add');
+        console.dir( container );
+        // container.style.width="200px";
+        addBtn.addEventListener('mouseover', function(){
+            // console.log( e );
+            console.log('#####')
+            // console.log( container.className );
+            // console.log( container.classList.contains('red') );
+            for( var i=0; i< container.length; i++ ){
+                if( container[i].classList.contains('red') )
+                container[i].classList.remove('red');
+            else
+                container[i].classList.add('red');
+            }
+            
+            // container.className = 'red';
+            // container.classList.add('red');
+            // container.style.width="300px";
+            // container.style.color='green';
+        });
+
+       
+    </script>
+    
+
+    <div class="another-container">
+
+
+        <h1 class="heading">GreaterGoods</h1>
+        <p>paragraph2</p>
+
+    </div>
+</body>
+</html>

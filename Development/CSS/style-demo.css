@@ -1,0 +1,401 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url("../Images/team.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.menu{
+    color:white;
+    font-size:larger;
+    position: absolute;
+    right:5%;
+    top:3%;
+    transform:translate(-50%,-50%);
+    cursor: pointer;
+}
+.fa-bars{
+    width:20%;
+    height:20%;
+}
+
+.logo-full{
+    width:10%;
+    height:10%;
+    position:absolute;
+    left: 8%;
+    top:8%;
+    transform: translate(-50%,-50%);
+}
+.goods{
+    width:60%;
+    height:60%;
+    cursor: pointer;
+
+}
+.nav{
+    background-color: transparent;
+    width:50%;
+    height:10vh;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:3%;
+}
+
+.nav-item{
+    margin-top: 10px;
+    font-size: large;
+    height:80px;
+}
+
+.nav-link{
+    border-bottom:2px solid white;
+    color:white;
+    cursor: pointer;
+    background-color: white;
+}
+
+.nav-link:hover{
+    background-color: white;
+    color:rgb(4, 4, 4);
+    border-radius: 8px;
+}
+.nav-link:active{
+    background-color: white;
+    color:black;
+}
+.container{
+    border-radius:8px;
+    border:2px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+    background:linear-gradient(rgba(145, 177, 241, 0.7),rgba(255, 185, 185, 0.4));
+    position: absolute;
+    left: 20%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:30%;
+    height: 60%;
+}
+
+.sub-container{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+form{
+    margin:5px;
+    border-radius:8px;
+    border-color:2px solid black;
+}
+.form-control:focus{
+    border:1px solid white;
+}
+.input-label{
+    margin:10px;
+}
+
+.btn{
+    color:white;
+    border:2px solid rgb(251, 250, 250);
+    margin:22px;
+   
+   
+}
+
+
+
+.myBtn:hover,.btn:hover{
+    background-color: white;
+    color:black;
+}
+.heading{
+    color:rgb(255, 255, 255);
+}
+.mb-1{
+    width: 50%;
+}
+.res{
+    width:100%;
+    text-decoration: none;
+    color:white;
+    padding:20px;
+}
+
+.side-menu{
+    display: none;
+    width:20%;
+    height:100vh;
+    background:white;
+    position:absolute;
+    right:0%;
+
+}
+.edit{
+    position: absolute;
+    right:15%;
+    top:4%;
+    background: rgb(12, 12, 12);
+    color:black;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    
+}
+.fa-mark{
+    color:black;
+}
+.cross{
+    cursor: pointer;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size:20px;
+    color:rgb(255, 0, 0);
+}
+
+.sub-menu{
+    position: relative;
+    width:80%;
+    height:80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+}
+
+ul {
+   width:100%;
+   height:80%;
+   display: block;
+   position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+
+}
+ul li{
+    text-align: center;
+    margin:auto;
+    padding:30px 0px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: larger;
+    
+}
+.side-link:hover{
+    border-bottom: 2px solid black;
+}
+
+.bars{
+   display: flex;
+   justify-content: flex-end;
+   margin:1.2rem;
+   background: rgb(111, 111, 111);
+   align-items: center;
+  
+    
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:5.2rem;
+    height:5.2rem;
+}
+.fa-bars{
+    cursor: pointer;
+    font-size:25px;
+    align-self: center;
+    justify-self: center;
+    /* height:20px; */
+}
+
+
+
+/* for java script purposes */
+
+.fa-bars2{
+    display: block;
+}
+
+
+
+
+
+/* Media Queries */
+
+
+/* @media screen and (max-width:2000px){
+    .logo-full{
+        width:20%;
+        height:10%;
+        position:absolute;
+        left: 18%;
+        top:8%;
+        transform: translate(-50%,-50%);
+    }
+
+    .nav-link{
+        border-bottom:2px solid white;
+        color:white;
+        cursor: pointer;
+        background-color: white;
+        font-size: 30px;
+    }
+
+    .nav-item{
+        margin-top: 50px;
+       
+    }
+
+    .container{
+        width:60%;
+        border-radius: 10px;
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .sub-container{
+        width:30%;
+        margin:auto;
+
+    }
+    .input-label{
+        margin:30px;
+        font-size:25px;
+    }
+
+    .btn{
+        font-size:25px;
+    }
+
+}*/
+
+@media screen and (max-width:1400px){
+
+    .logo-full{
+        width:20%;
+        height:10%;
+        position:absolute;
+        left: 18%;
+        top:8%;
+        transform: translate(-50%,-50%);
+    }
+
+    .goods{
+        width:50%;
+        height:60%;
+        cursor: pointer;
+    
+    }
+
+    .container{
+        width:37%;
+    }
+
+    .nav-link{
+        border-bottom:2px solid white;
+        color:white;
+        cursor: pointer;
+        background-color: white;
+        font-size: 20px;
+    }
+} 
+
+@media screen and (max-width:1025px){
+
+    .logo-full{
+        width: 30%;
+        height: 9%; 
+    }
+
+    .container{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width:60%;
+    }
+
+    .nav-link{
+        border-bottom:2px solid white;
+        color:white;
+        cursor: pointer;
+        background-color: white;
+        font-size:16px;
+    }
+
+    .heading{
+        font-size:16px;
+    }
+
+    .nav{
+        margin:20px;
+        position: absolute;
+        top:4%;
+    }
+
+    .bars{
+        position: absolute;
+        top:6%;
+
+    }
+    .fa-bars{
+        font-size:20px;
+        height:10px;
+    }
+    .fa-mark{
+        font-size:12px;
+    }
+    .edit{
+        position: absolute;
+        top:5%;
+        right:19%;
+        width:30px;
+        height:30px;
+        border-radius:50%;
+
+    }
+    
+}
+
+
+
+@media screen and (max-width:900px){
+
+    .logo-full{
+        width: 47%;
+        height: 12%;
+       position: absolute;
+       left: 60%;
+       top:3%;
+       transform:translateX(-50%);
+    }
+    .nav{
+        display: none;
+    }
+
+
+    
+
+}
+
+

@@ -46,6 +46,13 @@ body{
 
     /* transform: rotate(90deg); */
     /* transform:matrix(2, 0.8, 2, 2, 1, 3); */
+    animation-name: someName;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    animation-direction:normal ;
+    animation-timing-function: cubic-bezier(0.39, 1.05, 0.78, 0.12);
+    
     
 }
 

@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    text-align: center;
+    width:50vw;
+    height:50vh;
+    font-size:3rem;
+  
+}
+.fa-angle-down{
+    animation: bounce infinite;
+   
+}

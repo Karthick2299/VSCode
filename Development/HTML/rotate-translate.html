@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roate and Translate</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            width:100vw;
+            height:100vh;
+            background: cyan;
+            position: relative;
+        }
+        .container{
+            margin:5rem;
+            display: inline-block;
+            width:200px;
+            height:200px;
+            background: purple;
+            animation:3s ease-in infinite alternate rotateSquare;
+        }
+
+        @keyframes rotateSquare{
+            from{
+                transform: translateX(0px) rotate(0deg);
+              
+            }
+            to{
+                transform:translateX(600px) rotate(360deg) ;
+               
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

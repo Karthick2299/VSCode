@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+:root{
+    --primary-color: rgb(223, 222, 222);
+}
+
+body{
+    width:100vw;
+    height:100vh;
+}
+header{
+    height:10%;
+    text-align: center;
+    /* background-color: #ccc; */
+}
+.head-text{
+    width:100%;
+    background: var(--primary-color);
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:0.9rem;
+}
+.head-text a{
+    text-decoration: none;
+    padding:0.9rem;
+    color:steelblue;
+    
+}
+.head-text p{
+    word-spacing: 0.5rem;
+}
+
+.card-section{
+    width:25vw;
+    height:80vh;
+    margin:5rem 0 0 5rem;
+    position: relative;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height:50%;
+    width:100%;
+    background: white;
+    padding:1.2rem 1rem;
+}
+.card a {
+    text-decoration: none;
+    width:100%;
+    color:black; 
+}
+
+.card a,
+.card h3,
+.card p{
+    padding:1.5rem;
+    /* border-bottom: 1px solid black; */
+    border-right:none;
+    font-weight: 800;
+    box-shadow: 0px 1px  rgb(144, 143, 143);
+}
+.card p{
+    border-botom:2px solid black;
+    font-weight: 100;
+}
+
+.fa-plus {
+    position: absolute;
+    right:0;
+    padding-right:1.5rem;
+}
+
+.main-image-section{
+    width:65vw;
+    height: 100vh;
+    position:absolute;
+    top:15%;
+    right:0;
+    margin-right:2rem;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap:40px;
+    --width-image: 15rem;
+    --height-image: 15rem;
+}
+.product-1{
+    background: url("../Images/products/gg-products-1.webp");
+   
+}
+.product-2{
+    background: url("../Images/products/gg-products-3.webp");
+   
+}
+   
+.product-3{
+    background: url("../Images/products/gg-products-5.webp");
+    
+}
+   
+.product-4{
+    background: url("../Images/products/gg-products-7.webp");
+    
+}
+   
+.product-5{
+    background: url("../Images/products/gg-products-9.webp");
+    
+}
+   
+.product-6{
+    background: url("../Images/products/gg-products-11.webp");
+    
+}
+   
+.product-7{
+    background: url("../Images/products/gg-products-13.webp");
+    
+}
+   
+.product-8{
+    background: url("../Images/products/gg-products-15.webp");
+    
+}
+.product-9{
+    background: url("../Images/products/gg-products-17.webp");
+    
+}
+  
+.product-10{
+    background: url("../Images/products/gg-products-19.webp");
+    
+}
+  
+.product-11{
+    background: url("../Images/products/gg-products-21.webp");
+    
+}
+  
+.product-12{
+    background: url("../Images/products/gg-products-15.webp");
+    
+}
+  
+.product-13{
+    background: url("../Images/products/gg-products-23.webp");
+    
+}
+  
+.product-14{
+    background: url("../Images/products/gg-products-25.webp");
+    
+}
+  
+.product-15{
+    background: url("../Images/products/gg-products-27.webp");
+   
+}
+.product-1,.product-2,.product-3,.product-4,
+.product-5,.product-6,.product-7,.product-8,.product-9,
+.product-10,.product-11,.product-12,.product-13,.product-14,.product-15{
+    width:var(--width-image);
+    height:var(--height-image);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-footer{
+   display: flex;
+   justify-content: center;
+    width:100vw;
+    background: rgb(229, 229, 229);
+    height:20vh;
+    position: absolute;
+    bottom:-100%;
+    
+   
+}
+.footer-section{
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   height:20%;
+   
+}
+
+.footer-section ul{
+    display: flex;
+    flex-direction: row;
+
+}
+.footer-section ul li{
+    list-style-type: none;
+    padding:1rem;
+}
+
+.footer-section ul li a{
+    text-decoration: none;
+    color:black;
+    font-size:1.2rem;
+    text-transform: capitalize;
+}
+
+.footer-section ul li a:hover{
+    color:rgb(175, 174, 174);
+}
+
+
+.footer-icon-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30%;
+    width:100%;
+    position: absolute;
+    background: rgb(189, 189, 189);
+    top:50%;
+    transform: translateY(-50%);
+    /* left: 50%;
+    width:100%; */
+   
+}
+.footer-icon-section a{
+    padding:2rem;
+    font-size:1.4rem;
+}
+.fa-facebook-f{
+    color:#4267B2;
+}
+.fa-instagram{
+    color:#C13584;
+}
+.fa-pinterest{
+    color:	#E60023;
+}
+.fa-twitter{
+    color:#1DA1F2;
+}
+.fa-youtube{
+    color:	#FF0000;
+}
+  
+   

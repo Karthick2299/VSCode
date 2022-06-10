@@ -2,10 +2,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    --primary-color:rgb(247, 198, 189);
 }
 
 :root{
-    --primary-color:rgb(247, 198, 189);
     --secondary-color:indigo;
     --text-color-white:white;
     --text-color-black:black;
@@ -13,8 +13,8 @@
     --secondary-font:sans-serif; */
     --primary-border:2px solid black;
 }
-*{
-    font-family: 'Courier New', Courier, monospace !important;
+*{ 
+    -wefont-family: 'Courier New', Courier, monospace !important;
 }
 
 
@@ -22,7 +22,7 @@ body{
     width:100%;
     height:100vh;
     background: var(--primary-color);
-    color:var(--text-color-black);
+    color:var(--text-color-white);
     
     font: 800 5rem  'Poppins';
     display: flex;

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bath</title>
+
+    <link rel="stylesheet" href="../CSS-Files/style-bath_page_new.css">
+
+    <script src="https://kit.fontawesome.com/cbccd8a6b1.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital@1&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    
+
+
+</head>
+<body>
+    
+    <section class="pop-up-msg">
+        <p>Free shipping on orders over <span>$35</span></p>
+        <a href="#"><i class="fa-solid fa-xmark"></i></a>
+    </section>
+
+    <section class="navigation-section">
+
+        <div class="bar-icon">
+            <a href="#" class="anchorTag" onclick="viewSideNav()"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="logo">
+            <img src="../Images/products/dark-gg-logo.webp" >
+        </div>
+
+        <div class="cart">
+            <p>cart <span>0</span></p>
+        </div>
+
+    </section>
+
+    <section class="side-navigation" >
+
+        <div class="close-icon">
+            <a href="#" onclick="HideSideNav()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <form class="form-tab">
+            <input type="text" placeholder="Search Products..."> 
+            <div class="search-icon">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </form>
+
+        <div class="menu-links">
+            <ul>
+                <li class="link-items">
+                    <a href="#">Collections</a></li>
+                <li class="link-items">
+                    <a href="#">Kitchen <span><i class="fa-solid fa-plus"></i></span></a></li>
+                <li class="link-items">
+                    <a href="#">Health <span><i class="fa-solid fa-plus"></i></span></a></li>
+                <li class="link-items">
+                    <a href="#">Bath <span><i class="fa-solid fa-plus"></i></span></a></li>
+                <li class="link-items">
+                    <a href="#">Support <span><i class="fa-solid fa-plus"></i></span></a></li>
+                <li class="link-items">
+                    <a href="#">Our Story <span></span></a></li>
+            </ul>
+        </div>
+
+        <div class="sign-up-links">
+            <ul>
+                <li class="btn-items"><button class="btn">Sign in</button></li>
+                <li class="btn-items"><button class="btn">Register</button></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <section class="notify-section">
+        <a href="#">Home </a> <p><span>/</span>Bath</p> 
+    </section>
+
+
+    <section class="sliding-section">
+        <a href="#"><i class="fa-solid fa-sliders"></i></a>
+        <div class="sort">
+            <h2>Sort by</h2>
+            <select class="featured" name="sort by" id="sorting-section">
+                <option value="featured">Featured</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+                <option value="low-high">Low - High</option>
+            </select>
+        </div>
+    </section>
+
+    <!--Card Section-->
+    <section class="main-card-section">
+        <section class="sub-card-section card-1">
+            
+            <div class="img-section">
+                
+                <img class="main-img" src="../Images/products/gg-products-1.webp">
+                <img src="../Images/products/gg-products-2.webp" class="hover">
+            </div>
+            
+            <div class="icon-section">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+            <div class="text-section">
+                <h2>Preminum Bluetooth Smart Scale (V.2) </h2>
+            <p class="sold-out-text"> <span>sold out</span></p>
+            </div>
+        </section>
+
+        <section class="sub-card-section card-2">
+            
+            <div class="img-section">
+                
+                <img src="../Images/products/gg-products-3.webp">
+                <img src="../Images/products/gg-products-4.webp" class="hover">
+            </div>
+            
+            <div class="icon-section">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+            <div class="text-section">
+                <h2>AccuCheck Scale </h2>
+                <p>$00.00</p>
+            
+            </div>
+        </section>
+
+            <section class="sub-card-section card-3">
+        
+                <div class="img-section">
+                    
+                    <img src="../Images/products/gg-products-5.webp">
+                    <img src="../Images/products/gg-products-6.webp" class="hover">
+                </div>
+                
+                <div class="icon-section">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+    
+                <div class="text-section">
+                    <h2>Sonic Electric ToothBrush </h2>
+                    <p>$00.00</p>
+                
+                </div>
+            </section>
+
+            <section class="sub-card-section card-4">
+            
+                <div class="img-section">
+                    
+                    <img src="../Images/products/gg-products-7.webp">
+                    <img src="../Images/products/gg-products-8.webp" class="hover">
+                </div>
+                
+                <div class="icon-section">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+    
+                <div class="text-section">
+                    <h2>Body consumption scale </h2>
+                    <p>$00.00</p>
+                
+                </div>
+            </section>
+
+            <section class="sub-card-section card-5">
+            
+                    <div class="img-section">
+                        
+                        <img src="../Images/products/gg-products-9.webp">
+                        <img src="../Images/products/gg-products-10.webp" alt="" class="hover">
+                    </div>
+                    
+                    <div class="icon-section">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+        
+                    <div class="text-section">
+                        <h2>ToothBrush Replacement Heads </h2>
+                        <p>$00.00</p>
+                    
+                    </div>
+
+            </section>
+
+            <section class="sub-card-section card-6">
+            
+                <div class="img-section">
+                    
+                    <img src="../Images/products/gg-products-11.webp">
+                    <img src="../Images/products/gg-products-12.webp" class="hover" alt="">
+                </div>
+                
+                <div class="icon-section">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+    
+                <div class="text-section">
+                    <h2>Bluetooth smart scale </h2>
+                    <p>$00.00</p>
+                
+                </div>
+
+        </section>
+        <section class="sub-card-section card-7">
+            
+            <div class="img-section">
+                
+                <img src="../Images/products/gg-products-13.webp">
+                <img src="../Images/products/gg-products-14.webp" class="hover" alt="">
+            </div>
+            
+            <div class="icon-section">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+            <div class="text-section">
+                <h2>high capacity scale </h2>
+                <p>$00.00</p>
+            
+            </div>
+
+    </section>
+    <section class="sub-card-section card-8">
+            
+        <div class="img-section">
+            
+            <img src="../Images/products/gg-products-15.webp">
+            <img src="../Images/products/gg-products-16.webp" class="hover" alt="">
+        </div>
+        
+        <div class="icon-section">
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <div class="text-section">
+            <h2>Preminum Bluetooth smart scale (V.1) </h2>
+            <p>$00.00</p>
+        
+        </div>
+
+</section>
+<section class="sub-card-section card-9">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-17.webp">
+        <img src="../Images/products/gg-products-18.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>BathRoom Scale </h2>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+<section class="sub-card-section card-10">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-19.webp">
+        <img src="../Images/products/gg-products-20.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>Bathroom Scale(Shine through display) </h2>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+<section class="sub-card-section card-11">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-21.webp">
+        <img src="../Images/products/gg-products-22.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>high capacity body composition scale </h2>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+<section class="sub-card-section card-12">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-23.webp">
+        <img src="../Images/products/gg-products-24.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>premium Wi-fi smart scale </h2>
+        <p class="sold-out-text"><span>sold out</span></p>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+<section class="sub-card-section card-13">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-25.webp">
+        <img src="../Images/products/gg-products-26.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>Bathroom Scale </h2>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+<section class="sub-card-section card-14">
+            
+    <div class="img-section">
+        
+        <img src="../Images/products/gg-products-27.webp">
+        <img src="../Images/products/gg-products-28.webp" class="hover" alt="">
+    </div>
+    
+    <div class="icon-section">
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <div class="text-section">
+        <h2>wi-fi smart scale </h2>
+        <p class="sold-out-text"><span>sold out</span></p>
+        <p>$00.00</p>
+    
+    </div>
+
+</section>
+
+
+    </section>
+
+    <!--Footer Sections-->
+
+    <footer class="main-footer-section">
+
+        <div class="link-section">
+            <ul class="footer-ul">
+                <li>
+                    <a href="#">Collections</a></li>
+                <li>
+                    <a href="#">Kitchen</a></li>
+                <li>
+                    <a href="#">Healh</a></li>
+                <li>
+                    <a href="#">Bath</a></li>
+                <li>
+                    <a href="#">Support</a></li>
+                <li>
+                    <a href="#">Our Story</a></li>
+            </ul>
+        </div>
+
+        
+
+        <div class="social-icon-section">
+
+            <div class="copy-right-section">
+                <h2>@Copyright 2022 <span>greater goods.</span></h2>
+            </div>
+
+            <ul class="icon-ul">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <!-- <script src="../JS-Files/gg-bath-page.js"></script> -->
+</body>
+</html>

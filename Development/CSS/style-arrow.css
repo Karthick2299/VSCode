@@ -21,3 +21,7 @@ body{
     animation: bounce infinite;
    
 }
+progress{
+    height: 5rem;
+    border-radius:none;
+}

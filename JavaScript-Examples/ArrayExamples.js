@@ -117,6 +117,63 @@
 
 //forEach another Example
 
-const ages = [12,22,33,44,55];
+// const ages = [12,22,33,44,55];
 
-ages.forEach(agesElement => console.log(agesElement));
+// ages.forEach(agesElement => console.log(agesElement));
+
+
+//Array Example 11 - from()
+
+// const ages = [12,2,3,4,5];
+
+// const result = Array.from(ages);
+
+// console.log(result);
+
+//Array Example 12 - includes()
+
+// const ages = ["one","two","three"];
+
+// let result_1  = ages.includes("one");
+// let result_2  = ages.includes("one", 2);
+
+// console.log(result);
+
+//Array Example 13 - indexOf()
+
+// const cars = ["maserati", "mercedez benz","audi","rollsroyce"];
+
+// const result = cars.indexOf("maserati");
+
+// console.log(result);
+
+
+
+//Array Example 14 - isArray()
+
+// const bikes = ["bmw","royal enfield","duke","CBR"];
+
+// const result = Array.isArray(bikes);
+
+// console.log(result);
+
+//Array Example 15 - join()
+
+// const names = ["aaa","bbb","ccc","ddd"];
+
+// const result = names.join(" $ ");
+
+// console.log(result);
+
+//Array Example 16 - keys()
+
+const names = ["aaa","bbb","ccc"];
+const keys = names.keys();
+
+let text = "";
+
+for(let x of keys){
+    text += x + " ";
+}
+
+console.log(text);

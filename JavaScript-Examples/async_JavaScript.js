@@ -40,3 +40,86 @@
 
 // setTimeout(asychronousFunction, 3000);
 // displayer();
+
+
+//promises Example
+
+// let myPromise  = new Promise(function(resolve, reject){
+//     let input = 1;
+
+//     if(input == 11){
+//         resolve("messge from resolve ...Sucess!!!");
+//     }
+//     else{
+//         reject("failed!!");
+//     }
+
+// });
+
+
+// myPromise.then(
+//     function(value){
+//         displayer(value);
+//     },
+
+//     function(error){
+//         displayer(error);
+//     }
+// );
+
+// function displayer(inputValues){
+//     console.log("message : " + inputValues);
+// }
+
+
+//Promise Example 2
+
+// let promiseVariable = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("Message from resolve")},2000);
+//     });
+
+// promiseVariable.then(function(InputValue){
+//     console.log(InputValue);
+// });
+
+
+//Promise Example 2
+
+// function myfunction(){
+//     return Promise.resolve("success") + Promise.reject("reject message");
+// }
+
+// function anotherFunction(){
+//     return Promise.reject("reject message");
+// }
+
+// myfunction().then(
+//     function display(){
+//         console.log("Success Message");
+//     }
+
+// );
+
+
+//Promise Example 3
+
+let myPromise = new Promise(success,error);
+
+let exampleVariable = true;
+
+myPromise.then(success);
+myPromise.catch(error);
+
+function success(){
+    console.log("success Message");
+}
+
+function error(){
+    console.log("Error Message");
+}
+
+
+
+
+

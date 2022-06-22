@@ -10,7 +10,15 @@
 // let myPerson = new Person();
 // myPerson.displayMessage();
 
-import * as newMesage from "../JavaScript-Examples/import_Export";
-console.log(newMesage);
 
-export {message};
+// class Example_name{
+//     constructor(first, last){
+//         this.first = first;
+//         this.last = last;
+//     }
+// }
+
+
+// const callConstructor = new Example_name("karthick","selvam");
+
+// console.log(callConstructor.first + " " + callConstructor.last);

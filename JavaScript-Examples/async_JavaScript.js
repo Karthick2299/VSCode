@@ -104,22 +104,60 @@
 
 //Promise Example 3
 
-let myPromise = new Promise(success,error);
+// let myPromise = new Promise(success,error);
 
-let exampleVariable = true;
+// let exampleVariable = true;
 
-myPromise.then(success);
-myPromise.catch(error);
+// myPromise.then(success);
+// myPromise.catch(error);
 
-function success(){
-    console.log("success Message");
-}
+// function success(){
+//     console.log("success Message");
+// }
 
-function error(){
-    console.log("Error Message");
-}
-
-
+// function error(){
+//     console.log("Error Message");
+// }
 
 
+//async Example 1
+
+// async function displayer(){
+//     let promise  = new Promise(function(resolve,reject){
+//         resolve("hello world");
+//     });
+    
+//     console.log(await promise);
+    
+// }
+
+// displayer();
+
+//Promise reject Example
+
+// function resolved(){
+//     console.log("resolved");
+// }
+
+// function rejected(result){
+//     console.error(result);
+// }
+
+// Promise.reject(new Error("Something went Wrong")).then(resolved,rejected);
+
+
+//promise Example program
+
+const count = true;
+
+let promiseVariable = new Promise(function(resolve,reject){
+    if(count){
+        console.log("count is there");
+    }
+    else{
+        console.log("no counts");
+    }
+});
+
+// console.log(promiseVariable);
 

@@ -167,3 +167,4 @@ const object_values = {
 
 console.log(object_values.hasOwnProperty('one'));
 console.log(object_values.hasOwnProperty('onfivee'));
+

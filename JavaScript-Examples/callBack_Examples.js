@@ -27,28 +27,60 @@
 
 //callBack function Example 3
 
-function mainFunction(){
+// function mainFunction(){
 
-    let exampleString = "Karthick - comes from mainFunction";
-    first_function(exampleString);
+//     let exampleString = "Karthick - comes from mainFunction";
+//     first_function(exampleString);
 
-}
+// }
 
-function first_function(result){
+// function first_function(result){
+//     let anotherVariable = result;
+//     console.log("first function called");
+//     second_function(anotherVariable);
+// }
+
+// function second_function(InputFromFirst_Function){
+//     let second_variable = InputFromFirst_Function;
+//     console.log("second function called");
+//     displayer(second_variable);
+// }
+
+// function displayer(result){
+//     console.log("finally displayer method called");
+//     console.log(result);
+// }
+
+// mainFunction();
+
+//callBack function Example
+
+function firstFunction(){
+    let someName = "loki";
+    console.log("firstFunction");
+    
+    secondFunction(someName);
+    
+    }
+    
+    function secondFunction(result){
     let anotherVariable = result;
-    console.log("first function called");
-    second_function(anotherVariable);
-}
+    
+    console.log("second function");
+    
+    displayResult(anotherVariable);
+    
+    
+    
+    }
+    
+    function displayResult(anyName){
+    console.log("from displayResult method");
+    
+    console.log("I'm " + anyName);
+    
+    
+    }
 
-function second_function(InputFromFirst_Function){
-    let second_variable = InputFromFirst_Function;
-    console.log("second function called");
-    displayer(second_variable);
-}
-
-function displayer(result){
-    console.log("finally displayer method called");
-    console.log(result);
-}
-
-mainFunction();
+    firstFunction();
+    

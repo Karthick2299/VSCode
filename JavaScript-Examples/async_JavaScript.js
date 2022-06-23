@@ -148,16 +148,76 @@
 
 //promise Example program
 
-const count = true;
+// const count = true;
 
-let promiseVariable = new Promise(function(resolve,reject){
-    if(count){
-        console.log("count is there");
-    }
-    else{
-        console.log("no counts");
-    }
-});
-
+// let promiseVariable = new Promise(function(resolve,reject){
+//     if(count){
+//         console.log("count is there");
+//     }
+//     else{
+//         console.log("no counts");
+//     }
+// });
 // console.log(promiseVariable);
 
+
+//Promise Example 
+
+// let countValue = new Promise(function(resolve,reject){
+//     let count = 0;
+
+//     if(count >= 0){
+//         resolve("promise Accepted");
+//     }
+
+//     else{
+//         reject("Something went Wrong");
+//     }
+// });
+
+
+// countValue.then(
+//     function successValue(result){
+//         console.log(result);
+//     }
+// )
+
+// .catch(
+//     function errorValue(result){
+//         console.log(result);
+//     }
+// );
+
+//Promise Example - finally
+
+// let countValue = new Promise(function(resolve,reject){
+//     let counter = 10;
+
+//     if(counter > 0){
+//         resolve("Promise Accepted");
+//     }
+//     else{
+//         reject("Promise Rejected");
+//     }
+// });
+
+
+// countValue.then(
+//     function successMessage(result){
+//         console.log("Success Message");
+//         console.log(result);
+//     }
+// )
+
+// .catch(
+//     function ErrorMessage(result){
+//         console.log("Something went Wrong");
+//         console.log(result);
+//     }
+// )
+
+// .finally(
+//     function finallyMethod(){
+//         console.log("from finally Method");
+//     }
+// );

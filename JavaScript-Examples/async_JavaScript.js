@@ -221,3 +221,56 @@
 //         console.log("from finally Method");
 //     }
 // );
+
+
+//async function Example
+
+// async function showingResult(){
+//     console.log("from showingResult function");
+//     return Promise.resolve("success Message from resolve");
+// }
+
+// showingResult().then(
+//     function(result){
+//         console.log(result);
+//     }
+// )
+
+
+//async function Example - without await keyword
+
+// let examplePromise = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("from resolve in Promise");
+//     },4000);
+// });
+
+// async function showingResult(){
+
+//     let result = await examplePromise;
+
+//     console.log(result);
+//     console.log("it Prints first");
+
+// }
+
+// showingResult();
+
+//async function Example - with await keyword
+
+let examplePromise = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve("from resolve in Promise");
+    },4000);
+});
+
+async function showingResult(){
+
+    let result = await examplePromise;
+
+    console.log(result);
+    console.log("it Prints first");
+
+}
+
+showingResult();

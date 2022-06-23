@@ -1,0 +1,1 @@
+some text available in text file for fetch demo purpose.

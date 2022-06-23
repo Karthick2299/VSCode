@@ -258,19 +258,58 @@
 
 //async function Example - with await keyword
 
-let examplePromise = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        resolve("from resolve in Promise");
-    },4000);
+// let examplePromise = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve("from resolve in Promise");
+//     },4000);
+// });
+
+// async function showingResult(){
+
+//     let result = await examplePromise;
+
+//     console.log(result);
+//     console.log("it Prints first");
+//     console.log(examplePromise);
+
+// }
+
+// showingResult();
+
+//difference to know for Callback function and Promise Example
+
+// function myFunction(result){
+//     console.log(result);
+// }
+
+// setTimeout(function(){
+//     myFunction("Hello");
+// },3000);
+
+//Now using Promise in function
+
+let promise = new Promise((resolve,reject) => {
+    let count = false;
+        if(count){
+            setTimeout(() =>{
+                resolve("Hello");
+            },2000);
+        }
+        else{
+            setTimeout(() => {
+                reject("Hello from reject");
+            },2000);
+        }
 });
 
-async function showingResult(){
-
-    let result = await examplePromise;
-
+promise.then((result) => {
     console.log(result);
-    console.log("it Prints first");
+})
 
-}
+.catch((result) => {
+    console.log(result);
+})
 
-showingResult();
+.finally(function(result){
+    console.log("from finally method");
+})

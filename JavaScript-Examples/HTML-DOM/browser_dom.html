@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser DOM </title>
+</head>
+<body>
+    
+    <!-- <p>window.location object Example</p> -->
+
+    <p id="para"></p>
+
+    <!-- <button class="btn" onclick="newDocument()">Load New Document</button> -->
+
+
+    <!-- <button class="btn" onclick="moveForwardToWebapge()">Load New Document</button> -->
+
+
+    <!-- <button class="btn" onclick="moveBackwardToWebpage()">Load New Document</button> -->
+
+    <!-- <button onclick="confirmBoxFunction()">click me</button> -->
+
+    <!-- <button onclick="getUserInput()">click me</button> -->
+
+    <!-- <button onclick="invokeFunction()">Invoke</button>
+    <button onclick="abortFunction()">Abort</button> -->
+
+    <button onclick="clearInterval(timerVariable)">STOP</button>
+
+    <script>
+        //window.location.object Examples
+
+        //window.location.href Example
+        // document.getElementById("para").innerText = window.location.href;
+
+        //window.location.hostname - It shows IP address or UserName
+        // document.getElementById("para").innerText = window.location.hostname;
+
+        //window.location.pathname Example - It shows path name of the File
+        // document.getElementById("para").innerHTML = window.location.pathname;
+
+        //window.location.protocol - It shows http or https which protocol used in this File.
+        // document.getElementById("para").innerHTML = window.location.protocol;
+
+        //window.location.port - It shows port number of the current page
+        // document.getElementById("para").innerText = window.location.port;
+
+        //window.location.assign() - It used to assign a webpage or website to a current page to access it.
+        
+        // function newDocument(){
+        //     document.getElementById("para").innerHTML = window.location.assign("https://www.google.com");
+        // }
+    //---------------------------------------------------------------------------------------------------------
+
+
+    //window.history.object Examples
+
+    //window.history.forward() - Example
+
+    // function moveForwardToWebapge(){
+    //     window.history.forward();
+    // }
+
+    //window.history.back() - Example
+
+    // function moveBackwardToWebpage(){
+    //     window.history.back();
+    // }
+
+    //---------------------------------------------------------------------------------
+
+
+
+    /*navigator.object Examples - In this navigator we can use navigator without
+    a prefix "window"*/
+
+    //navigator.cookieEnabled - It check whether a cookie is enabled or not.(true or false)
+
+    // document.getElementById("para").innerHTML = "Is cookie is Enabled ? " + navigator.cookieEnabled;
+
+    //navigator.appName - It shows application Name
+
+    // document.getElementById("para").innerHTML = navigator.appName;
+
+    //navigator.appCodeName - It shows code Name of the application i.e mozilla
+
+    // document.getElementById("para").innerHTML = navigator.appCodeName;
+
+    //navigator.product - It shows Gecko that means a "browser Engine developed by Mozilla."
+
+    // document.getElementById("para").innerHTML = navigator.product;
+
+    //navigator.apVersion - It shows version of the web browser
+
+    // document.getElementById("para").innerHTML = navigator.appVersion;
+
+    //navigator.userAgent - It shows user-agent header that send to the server
+
+    // document.getElementById("para").innerHTML = navigator.userAgent;
+
+    //navigator.platform - It shows the browser Platform - like MacIntel
+
+    // document.getElementById("para").innerHTML = navigator.platform;
+
+    //navigator.onLine - It checks whether a browser is in online or not (true or false)
+
+    // document.getElementById("para").innerHTML = navigator.onLine;
+
+    //navigator.javaEnabled() - It shows the java is enabled or not (true or false)
+
+    // document.getElementById("para").innerHTML = navigator.javaEnabled();
+
+
+    //--------------------------------------------------------------------------------------
+
+
+    //Popup boxes Examples - like alert, confirm box, prompt box
+
+    //alert box Example
+
+    // alert("hi, I'm from alert box.")
+
+    //confirm box Example
+
+        // function confirmBoxFunction(){
+        //     var textToDisplay = "";
+        //     if(confirm("Press a button")){
+        //         textToDisplay = "You Pressed OK!";
+        //     }
+        //     else{
+        //         textToDisplay = "You Pressed Cancel!";
+        //     }
+
+        //     document.getElementById("para").innerHTML = textToDisplay;
+        // }
+
+    //prompt box Example - It used to get User Input
+
+    // function getUserInput(){
+
+    //     let userInput = prompt("Enter Your Name", "Christopher Nolan");
+
+    //     let textToDisplay;
+
+    //     if(userInput == null || userInput == ""){
+    //         textToDisplay = "User Canceled the Prompt";
+    //     }
+    //     else{
+    //         textToDisplay = " Hi " + userInput;
+    //     }
+
+    //     document.getElementById("para").innerHTML = textToDisplay;
+
+    // }
+
+
+    //Timing Events Examples
+
+    //setTimeout(function, millisecond) - Example
+
+    // function displaySomething(){
+    //     document.getElementById("para").innerHTML = "something to print on a display \n " + " It shows after 3 Seconds";
+    // }
+
+    // function invokeFunction(){
+    // setTimeout(displaySomething, 3000);
+    // }
+
+    //clearTimeout(variable to clear) - Example
+
+    
+    // function invokeFunction(){
+    //     setTimeout(function(){
+    //         document.getElementById("para").innerHTML = "from setTimeout Function";
+    //     },3000);
+    // }
+    
+    // function abortFunction(){
+        
+    //     let functionVariable = invokeFunction();
+    //     clearTimeout(functionVariable);
+    //     document.getElementById("para").innerHTML = "Function Aborted SucessFully";
+        
+
+    // }
+
+
+    //setInterval(function, millisecond) - Example
+
+    // let timerVariable = setInterval(timerFunction,1000);
+
+    // function timerFunction(){
+    //     const date = new Date();
+    //     document.getElementById("para").innerHTML = date.toLocaleTimeString();
+    // }
+
+
+    //clearInterval(function-variable) - Example
+
+    // let timerVariable = setInterval(timerFunction,1000)
+
+    // function timerFunction(){
+    //     const date  = new Date();
+    //     document.getElementById("para").innerHTML = date.toLocaleString();
+    // }
+
+    //------------------------------------------------------------------------------------------
+
+    //Cookie Example
+
+    /* Cookies are data, stored in small text files, on your computer.
+
+When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.
+
+Cookies were invented to solve the problem "how to remember information about the user":
+
+When a user visits a web page, his/her name can be stored in a cookie.
+Next time the user visits the page, the cookie "remembers" his/her name. */
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API Examples</title>
+</head>
+<body>
+    
+
+    <h2>Examples are Display Here : </h2>
+
+    <!-- <p>Count Numbers : <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button> -->
+
+
+
+    <p id="para"></p>
+
+    <script>
+        // const documentVariable = document.getElementById("para");
+
+        // function getLocation(){
+        //     try{
+        //         navigator.geolocation.getCurrentPosition(displayPosition);
+        //     }
+        //     catch(err){
+        //         documentVariable.innerHTML = err;
+        //     }
+        // }
+
+        // function displayPosition(position){
+        //     documentVariable.innerHTML = "Latitutde " + position.coords.latitude + " \n " + position.coords.Longitude;
+        // }
+
+        //------------------------------------------------------------
+
+        //Input validation Example
+
+        
+        
+        // function validationFunction() {
+        //     const inputVariable = document.getElementById("input_one");
+
+        //     if(!inputVariable.checkValidity()){
+        //         document.getElementById("para").innerHTML = inputVariable.validationMessage;
+        //     }
+            
+        //     else{
+        //         document.getElementById("para").innerHTML = "Input OK";
+        //     }
+
+        // }
+
+
+        //web Storage API Example
+        
+        //local storage Example 
+
+        // localStorage.setItem("name","Karthick");
+        // document.getElementById("para").innerHTML = localStorage.getItem("name");
+
+         //sessionStorage Example
+
+        // sessionStorage.setItem("id",123);
+        // document.getElementById("para").innerHTML = sessionStorage.getItem("id");
+
+
+        //fetch API Example
+
+        // import fetch from 'node-fetch';
+
+        // async function fetchText(){
+        //     let response = new fetch("fetch_data.txt");
+
+        //     console.log(response.status);
+        //     console.log(response.statusText);
+
+        //     if(response.status == 200){
+        //         let data  = await response.text();
+        //     }
+
+        // }
+
+        // fetchText();
+
+
+        //web worker API Example
+
+        // let w;
+
+        // function startWorker(){
+        //     if(typeof(w) == "undefined"){
+        //         w = new Worker("counter.js");
+        //     }
+
+        //     w.onmessage = function (event){
+        //         document.getElementById("result").innerHTML = event.data;
+        //     };
+        // }
+
+        // function stopWorker(){
+        //     w.terminate();
+        //     w = undefined;
+        // }
+
+        getText("example_data.json");
+
+        async function getText(file){
+            let x = await fetch(file);
+            let y = await x.text();
+
+            document.getElementById("para").innerHTML = y;
+        }
+        
+
+    </script>
+</body>
+</html>

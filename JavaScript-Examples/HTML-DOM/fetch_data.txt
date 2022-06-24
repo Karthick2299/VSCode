@@ -1,1 +1,6 @@
 some text available in text file for fetch demo purpose.
+
+{
+name : "karthick",
+id : 123
+}

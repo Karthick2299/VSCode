@@ -17,8 +17,10 @@
 
 
 
-    <p id="para1"></p>
-    <p id="para2"></p>
+    <p id="para"></p>
+   
+    <button onclick="getLocation()">click to know the Location</button>
+
 
     <script>
         // const documentVariable = document.getElementById("para");
@@ -135,38 +137,77 @@
         //Post request web API Example
 
 
-        createNewUser("https://jsonplaceholder.typicode.com/posts");
+        // createNewUser("https://jsonplaceholder.typicode.com/posts");
 
-        async function createNewUser(file){
+        // async function createNewUser(file){
 
-            let createVariable  = fetch(file, {
-                method : 'POST',
-                body : JSON.stringify({
-                    title : 'karthick',
-                    body : "batman",
-                    userId : 123,
-                }),
-                headers : {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
+        //     let createVariable  = fetch(file, {
+        //         method : 'POST',
+        //         body : JSON.stringify({
+        //             title : 'karthick',
+        //             body : "batman",
+        //             userId : 123,
+        //         }),
+        //         headers : {
+        //             'Content-type': 'application/json; charset=UTF-8',
+        //         },
+        //     })
 
-            .then((response) => response.text())
-            .then((users) => document.getElementById("para1").innerHTML = users);
+        //     .then((response) => response.text())
+        //     .then((users) => document.getElementById("para1").innerHTML = users);
 
-        }
+        // }
 
-        getUsers("https://jsonplaceholder.typicode.com/users");
+        // getUsers("https://jsonplaceholder.typicode.com/users");
 
-        async function getUsers(file){
-            let read = await fetch(file);
-            let display = await read.text();
+        // async function getUsers(file){
+        //     let read = await fetch(file);
+        //     let display = await read.text();
 
-            document.getElementById("para2").innerHTML = display;
-        }
+        //     document.getElementById("para2").innerHTML = display;
+        // }
 
         
 
+        //Geolocation Example
+
+        const pTag = document.getElementById("para");
+
+         function getLocation(){
+
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            }
+            else{
+                pTag.innerHTML = "Geolocation is not Supported in your browser";
+            }
+
+        }
+
+        function showPosition(position){
+            pTag.innerHTML = "Latitude: " + position.coords.latitude + "\n" 
+            + "Longitude: " + position.coords.longitude; 
+        }
+
+        function showError(error){
+
+            switch(error.code){
+                case error.PERMISSION_DENIED :
+                    pTag.innerHTML = "User denied the request for Geolocation";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    pTag.innerHTML = "Location Information is unavailable";
+                    break;
+                case error.TIMEOUT:
+                    pTag.innerHTML = "The request to get user loaction timed out";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    pTag.innerHTML = "An unknown error occured ";
+                    break;
+            }
+
+        }
 
 
     </script>

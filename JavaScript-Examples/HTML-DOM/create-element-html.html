@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create html element</title>
+</head>
+<body>
+    
+    <div id="second_div">
+        <p>second text</p>
+    </div>
+    <div id="container">
+        <p>sample text from container div.</p>
+    </div>
+
+    <script>
+        document.body.onload = addElement();
+
+        function addElement(){
+            
+            const newDivTag = document.createElement("div");
+
+            const newContent  = document.createTextNode("hi..this is from javascript.");
+
+            newDivTag.appendChild(newContent);
+
+            const currentDiv = document.getElementById("second_div");
+
+            document.body.insertBefore(currentDiv);
+        }
+
+
+    </script>
+</body>
+
+
+</html>

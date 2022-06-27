@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    /* color:white; */
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url("/Development/Images/Comet_Wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.form-section{
+    /* border:1px solid white; */
+    box-shadow: 3px 2px 4px white;
+    width:30%;
+    height: 60%;
+    background: lightblue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 6px;
+}
+
+.main-form{
+    font-size:1.2rem;
+    width:100%;
+    height:100%;
+    background: rgb(1, 65, 78);
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+}
+
+.header-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    color:white;
+}
+.header-text::before{
+    width:100%;
+    height:2px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: steelblue;
+}
+.input-label{
+    color:white;
+}
+.forgot-section{
+    font-size:0.9rem;
+}
+
+.forgot-section a{
+    text-decoration: none;
+    color:steelblue;
+}
+.forgot-section a:hover{
+    color:white;
+}
+
+.btn{
+    width: 30%;
+    height:10%;
+    font-size:1rem;
+    border-radius:6px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: green;
+    color:white;
+}
+
+.input-field{
+    color:black !important;
+    font-family: inherit;
+}
+.btn a{
+    text-decoration: none;
+    color:black;
+}
+.btn:hover .submit-link{
+    color:white;
+}
+

@@ -51,6 +51,18 @@
         //     request.send();
         // }
 
+
+        //Ajax Example - getAllResponseHeaders()
+
+        const request = new XMLHttpRequest();
+
+        request.onload = function(){
+            document.getElementById("container").innerHTML = this.getAllResponseHeaders();
+        }
+
+        request.open("GET","ajax_call.txt");
+        request.send();
+
    </script>
 
 

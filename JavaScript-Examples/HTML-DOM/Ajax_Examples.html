@@ -54,14 +54,27 @@
 
         //Ajax Example - getAllResponseHeaders()
 
-        const request = new XMLHttpRequest();
+        // const request = new XMLHttpRequest();
 
-        request.onload = function(){
-            document.getElementById("container").innerHTML = this.getAllResponseHeaders();
-        }
+        // request.onload = function(){
+        //     document.getElementById("container").innerHTML = this.getAllResponseHeaders();
+        // }
 
-        request.open("GET","ajax_call.txt");
-        request.send();
+        // request.open("GET","ajax_call.txt");
+        // request.send();
+
+        //Ajax Example - getResponseHeader() -> gives header information from a source
+
+            // const request = new XMLHttpRequest();
+
+            // request.onload = function(){
+            //     document.getElementById("container").innerHTML = this.getResponseHeader("Last-Modified");
+            // }
+
+            // request.open("GET", "ajax_call.txt");
+            // request.send();
+
+
 
    </script>
 

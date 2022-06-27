@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Examples</title>
+</head>
+<body>
+    
+
+    <h2>Results are Display Here : </h2>
+    <p id="displayResult_1"></p>
+    <p id="displayResult_2"></p>
+
+
+    <script>
+
+        //object Example in JavaScript
+
+        // const user_one = {
+        //     name : "karthick",
+        //     id : 123,
+        //     city : "Ohio"
+        // };
+
+        // document.getElementById("displayResult").innerHTML = user_one.name;
+
+
+        //object Example - modify object property
+
+        // const user_two = {
+        //     FirstName : "karthick",
+        //     id : 123,
+        //     city : "Ohio"
+        // };
+
+        // document.getElementById("displayResult_1").innerHTML = user_two.FirstName;
+
+        // user_two["FirstName"] = "Divine";
+
+        // document.getElementById("displayResult_2").innerHTML = user_two.FirstName;
+
+
+        //object Example - JSON.parse() - convert json array to object 
+
+        // const text = '["BMW","AUDI","ROLLS ROYCE"]';
+
+        // const myArray = JSON.parse(text);
+
+        // document.getElementById("displayResult_1").innerHTML = myArray[0];
+
+
+        //Object Example  - 2 JSON.parse()
+
+        // const text = '{"name" : "karthick", "birth" : "1999-03-22"}';
+
+        // const obj = JSON.parse(text);
+
+        // obj.birth = new Date(obj.birth);
+
+        // document.getElementById("displayResult_1").innerHTML = obj.name + " : " + obj.birth;
+
+
+        //json Example  - json created by a object
+
+        // const obj = {
+        //     name : "karthick",
+        //     id : 123,
+        //     city : "Ohio"
+        // };
+
+        // const convertJson = JSON.stringify(obj);
+
+        // document.getElementById("displayResult_1").innerHTML = convertJson;
+
+
+        //convert Array to JSON
+
+        // const arrayObject = ["karthick","Divine", "Steffi"];
+
+        // const myJsonObject = JSON.stringify(arrayObject);
+
+        // document.getElementById("displayResult_1").innerHTML = myJsonObject;
+
+        //store data Example - localStorage
+
+        // const myObj = {
+
+        //     name : "karthick",
+        //     age : 22,
+        //     city : "Canada"
+        // }
+
+        // const convertObject = JSON.stringify(myObj);
+
+        // localStorage.setItem("testingJSON", convertObject);
+
+        // let text = localStorage.getItem("testingJSON");
+
+        // let obj = JSON.parse(text);
+
+        // document.getElementById("displayResult_1").innerHTML = obj.name;
+
+        //JSON.stringify() - Example
+
+        // const obj = {
+        //     name : "Karthick",
+        //     today : new Date(),
+        //     city : "Ohio"
+        // };
+
+        // const myJSON = JSON.stringify(obj);
+
+        // document.getElementById("displayResult_1").innerHTML = myJSON;
+
+
+        
+
+
+
+    </script>
+
+</body>
+</html>

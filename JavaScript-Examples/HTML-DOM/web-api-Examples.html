@@ -17,9 +17,14 @@
 
 
 
-    <p id="para"></p>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
    
-    <button onclick="getLocation()">click to know the Location</button>
+    <!-- <button onclick="getLocation()">click to know the Location</button> -->
+
+    <button onclick="createNewUser()">post Me</button>
+    <button onclick="getDetails()">Click Me</button>
 
 
     <script>
@@ -171,43 +176,199 @@
 
         //Geolocation Example
 
-        const pTag = document.getElementById("para");
+        // const pTag = document.getElementById("para");
 
-         function getLocation(){
+        //  function getLocation(){
 
-            if(navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            }
-            else{
-                pTag.innerHTML = "Geolocation is not Supported in your browser";
-            }
+        //     if(navigator.geolocation){
+        //         navigator.geolocation.getCurrentPosition(showPosition, showError);
+        //     }
+        //     else{
+        //         pTag.innerHTML = "Geolocation is not Supported in your browser";
+        //     }
 
-        }
+        // }
 
-        function showPosition(position){
-            pTag.innerHTML = "Latitude: " + position.coords.latitude + "\n" 
-            + "Longitude: " + position.coords.longitude; 
-        }
+        // function showPosition(position){
+        //     pTag.innerHTML = "Latitude: " + position.coords.latitude + "\n" 
+        //     + "Longitude: " + position.coords.longitude; 
+        // }
 
-        function showError(error){
+        // function showError(error){
 
-            switch(error.code){
-                case error.PERMISSION_DENIED :
-                    pTag.innerHTML = "User denied the request for Geolocation";
-                    break;
+        //     switch(error.code){
+        //         case error.PERMISSION_DENIED :
+        //             pTag.innerHTML = "User denied the request for Geolocation";
+        //             break;
 
-                case error.POSITION_UNAVAILABLE:
-                    pTag.innerHTML = "Location Information is unavailable";
-                    break;
-                case error.TIMEOUT:
-                    pTag.innerHTML = "The request to get user loaction timed out";
-                    break;
-                case error.UNKNOWN_ERROR:
-                    pTag.innerHTML = "An unknown error occured ";
-                    break;
-            }
+        //         case error.POSITION_UNAVAILABLE:
+        //             pTag.innerHTML = "Location Information is unavailable";
+        //             break;
+        //         case error.TIMEOUT:
+        //             pTag.innerHTML = "The request to get user loaction timed out";
+        //             break;
+        //         case error.UNKNOWN_ERROR:
+        //             pTag.innerHTML = "An unknown error occured ";
+        //             break;
+        //     }
 
-        }
+        // }
+
+
+        //Get Request using json placeholder api
+
+        // const url = "https://jsonplaceholder.typicode.com/todos/3";
+
+        // async function getDetails(){
+
+        //     const request = await fetch(url);
+        //     const changeTotext = await request.text();
+
+        //     document.getElementById("para").innerHTML = changeTotext;
+        // }
+
+
+        //Post Request using json placeholder api
+
+        // let data = {
+        //     id : 3,
+        //     FirstName : "Karthick",
+        //     LastName : "Panneerselvam"
+        // }
+
+    //     async function createNewUser(file){
+            
+    //         let createVariable = fetch(file, {
+    //             method : 'POST',
+    //             body : JSON.stringify({
+    //              "id": 1,
+    //               "name": "Doctor Strange",
+    //              "username": "Dark Knight", 
+    //              "email": "Sincere@april.biz",
+    //               "address": { "street": "222 becker Street",
+    //                          "suite": "Apt. 556", "city": "Gwenborough", 
+    //                          "zipcode": "92998-3874", 
+    //                          "geo": { "lat": "-37.3159", 
+    //                          "lng": "81.1496" } }, 
+    //                          "phone": "1-770-736-8031 x56442",
+    //                           "website": "hildegard.org", 
+    //                           "company": { 
+    //                             "name": "Romaguera-Crona",
+    //                              "catchPhrase": "Multi-layered client-server neural-net",
+    //                               "bs": "harness real-time e-markets" } }),
+
+    //         headers : {
+
+    //             'Content-type' : 'application/json; charset = UTF-8'
+
+    //         },
+            
+
+    //     })
+
+    //     .then((response) => response.text())
+    //     .then((user) => document.getElementById("para1").innerHTML = user)
+    //     // .then((dataDisplay) => document.getElementById("para").innerHTML = dataDisplay)
+
+    // }
+
+    // createNewUser("https://jsonplaceholder.typicode.com/posts")
+
+
+
+    //get request to see the result of post
+
+    // async function getDetails(){
+
+    //     const request = await fetch("https://jsonplaceholder.typicode.com/users/1");
+    //     const displayText = await request.text();
+
+    //     document.getElementById("para2").innerHTML = displayText;
+
+    // }
+
+
+    //put request using json placeholder api
+
+
+    //     async function updateUser(file){
+            
+    //         let createVariable = fetch(file, {
+    //             method : 'PUT',
+    //             body : JSON.stringify({
+    //              "id": 1,
+    //               "name": "Thanos",
+    //              "username": "Multi verse ", 
+    //              "email": "Sincere@april.biz",
+    //               "address": { "street": "222 becker Street",
+    //                          "suite": "Apt. 556", "city": "Titan", 
+    //                          "zipcode": "92998-3874", 
+    //                          "geo": { "lat": "-37.3159", 
+    //                          "lng": "81.1496" } }, 
+    //                          "phone": "1-770-736-8031 x56442",
+    //                           "website": "hildegard.org", 
+    //                           "company": { 
+    //                             "name": "Romaguera-Crona",
+    //                              "catchPhrase": "Multi-layered client-server neural-net",
+    //                               "bs": "harness real-time e-markets" } }),
+
+    //         headers : {
+
+    //             'Content-type' : 'application/json; charset = UTF-8'
+
+    //         },
+            
+
+    //     })
+
+    //     .then((response) => response.text())
+    //     .then((user) => document.getElementById("para1").innerHTML = user)
+    //     // .then((dataDisplay) => document.getElementById("para").innerHTML = dataDisplay)
+
+    // }
+
+    // updateUser("https://jsonplaceholder.typicode.com/posts/1")
+
+
+    //delete request using json placeholder api
+
+    // async function deleteUser(file){
+            
+    //         let createVariable = fetch(file, {
+    //             method : 'DELETE',
+    //             body : JSON.stringify({
+    //              "id": 1,
+    //               "name": "Thanos",
+    //              "username": "Multi verse ", 
+    //              "email": "Sincere@april.biz",
+    //               "address": { "street": "222 becker Street",
+    //                          "suite": "Apt. 556", "city": "Titan", 
+    //                          "zipcode": "92998-3874", 
+    //                          "geo": { "lat": "-37.3159", 
+    //                          "lng": "81.1496" } }, 
+    //                          "phone": "1-770-736-8031 x56442",
+    //                           "website": "hildegard.org", 
+    //                           "company": { 
+    //                             "name": "Romaguera-Crona",
+    //                              "catchPhrase": "Multi-layered client-server neural-net",
+    //                               "bs": "harness real-time e-markets" } }),
+
+    //         headers : {
+
+    //             'Content-type' : 'application/json; charset = UTF-8'
+
+    //         },
+            
+
+    //     })
+
+    //     .then((response) => response.text())
+    //     .then((user) => document.getElementById("para1").innerHTML = "Sucessfully deleted")
+    //     // .then((dataDisplay) => document.getElementById("para").innerHTML = dataDisplay)
+
+    // }
+
+    // deleteUser("https://jsonplaceholder.typicode.com/posts/1")
 
 
     </script>

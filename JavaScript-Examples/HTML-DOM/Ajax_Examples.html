@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Examples</title>
+</head>
+<body>
+
+   <div id="container">
+    <p>content to Change</p>
+
+    <button class="btn" onclick="loadDocument()">Click to Change</button>
+
+   </div>
+
+   <!--Java Script -->
+   
+   <script>
+
+        //Ajax Example 1
+
+        // function loadDocument(){
+        //     const request = new XMLHttpRequest();
+
+        //     request.onload = function(){
+        //         document.getElementById("container").innerHTML = this.responseText;
+        //     };
+
+        //     request.open("GET", "ajax_call.txt");
+        //     request.send();
+
+        // }
+
+
+        //Ajax Example 2 - onreadystatechange()
+
+        // function loadDocument(){
+        //     const request  = new XMLHttpRequest();
+        //     request.onreadystatechange = function(){
+        //         if(this.readyState == 4 && this.status == 200){
+        //         document.getElementById("container").innerHTML = this.responseText;
+        //         }
+        //         else{
+        //             document.getElementById("container").innerHTML = "Request Failed, Please Enter a Valid Request.";
+        //         }
+        //     };
+
+        //     request.open("GET", "something.txt");
+        //     request.send();
+        // }
+
+   </script>
+
+
+
+</body>
+</html>

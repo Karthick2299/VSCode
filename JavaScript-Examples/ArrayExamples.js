@@ -167,13 +167,44 @@
 
 //Array Example 16 - keys()
 
-const names = ["aaa","bbb","ccc"];
-const keys = names.keys();
+// const names = ["aaa","bbb","ccc"];
+// const keys = names.keys();
 
-let text = "";
+// let text = "";
 
-for(let x of keys){
-    text += x + " ";
+// for(let x of keys){
+//     text += x + " ";
+// }
+
+// console.log(text);
+
+
+//Example program
+
+function printPattern(){
+    let i,j,k,n = 5;
+
+for(i = 2; i <= n; i++){
+
+    //print the odd and even numbers
+
+    if(i % 2 == 0){
+        k = 1;
+    }
+    else{
+        k = 2;
+    }
+    for(j = 1; j <= i; j++){
+        console.log(k);
+        k += 2;
+    }
+    console.log("\n")
+
+}
 }
 
-console.log(text);
+printPattern();
+// nt main()
+
+
+

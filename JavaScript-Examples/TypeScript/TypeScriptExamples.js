@@ -124,7 +124,12 @@
 //         break;
 // }
 //void keyword Example
-function printSomething() {
-    console.log("hello from printSomething Method ");
+// function printSomething():void{
+//     console.log("hello from printSomething Method ");
+//     // return 0; -- It gives Error.
+// }
+// printSomething();
+function throwSomeError(message) {
+    throw new Error(message);
 }
-printSomething();
+throwSomeError("hello");

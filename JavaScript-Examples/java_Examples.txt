@@ -1,0 +1,87 @@
+String concatentaion:
+
+public class StringConcatenation{
+    psvm(){
+
+        Scanner scan = new Scanner(System.in);
+        Sop("Enter First String" );
+        String str1 = scan.next();
+
+
+        SOP("Enter second string : ");
+        String str2 = scan.next();
+
+        SOP("String concatenation is : ");
+        String result = str1 + str2;
+
+        SOP(result);
+
+    }
+}
+
+
+Pallindrome:
+
+
+public class pallindrome{
+
+    psvm(){
+
+        Scanner scan = new Scanner(System.in);
+        SOP("Enter a String to check " );
+        String string_one  = scan.next();
+        String reverse = "";
+        int length = string_one.length();
+
+        for(int i = reverse -1; i>= 0 ; i--){
+            reverse += string_one.charAt(i);
+        }
+
+        if(string_one.toLowerCase().equals(reverse.toLowerCase())){
+            SOP(string_one + " is Pallindrome");
+        }
+        else{
+            SOP(string_one + " is not pallindrome");
+        }
+
+
+        
+
+    }
+
+}
+
+
+SQL queries:
+
+Create query:
+
+
+create table table_name(
+
+    id INT,
+    userName 
+
+);
+
+insert into table_name Values(1,"aaa");
+insert into table_name Values(2,"bbb");
+insert into table_name Values(3,"ccc");
+
+
+read query:
+
+select * from table_name;
+
+
+update query:
+
+update table_name SET userName = "something" WHERE id = 3;
+
+delete query:
+
+delete from table_name where id = 1;
+
+delete table query:
+
+delete table_name;

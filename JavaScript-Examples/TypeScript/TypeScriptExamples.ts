@@ -201,8 +201,136 @@
 
 
 
-function throwSomeError(message : string) : never{
-    throw new Error(message);
+// function throwSomeError(message : string) : never{
+//     throw new Error(message);
+// }
+
+// throwSomeError("hello");
+
+
+//union type Example using Typescript
+
+// let code: (number | string);
+
+// code = "hello";
+// code = 23;
+
+// console.log(code);
+
+
+//function parameter as Union Example
+
+// function displaySomething(inputValue_1:(number | string), inputValue_2:(number | string)){
+//     console.log(typeof(inputValue_1)  + " : " + inputValue_1 );
+//     console.log(typeof(inputValue_2) + " : " + inputValue_2);
+// }
+
+
+// displaySomething(254, "karthick");
+
+//TypeAssertion Example using TypeScript
+
+// let example: any = "karthick";
+// let anotherVariable = <string> example;
+
+// console.log(typeof(anotherVariable));
+
+//Type assertion with Object Example using typescript
+
+// interface Employee{
+//     FirstName: string,
+//     id:number
+// }
+
+// let employee = <Employee>{};
+
+// employee.FirstName = "karthick";
+// employee.id = 123;
+
+
+// console.log(employee);
+
+
+//for loop Examples using typescript
+
+// let str = "Batman";
+
+// for(var character of str){
+//     console.log(character);
+// }
+
+//Fat Arrow function Example using typescript
+
+// let addition = (firstNumber:number, secondNumber:number) => {
+//     console.log(firstNumber + secondNumber);
+// }
+
+// addition(10,20);
+
+
+//arrow function Example 2
+
+// let printSomething = () => console.log("from printSomething");
+
+// printSomething();
+
+
+//arrow function Example 3
+
+
+// function addition(firstNumber:number, secondNumber : number){
+//     return firstNumber + secondNumber;
+// }
+
+// let sum:number = addition(5,5);
+
+// console.log(sum);
+
+/* ------------------------------------------------------------------ */
+
+//type alias Example using Typescript
+
+// type User = {firstName : string , age : number};
+
+// const user_one : User = {firstName : "karthick", age : 23};
+
+// console.log(user_one);
+
+//type alias Example 2
+
+// type user = {name: string, age: number};
+// const user_one : user = {name : "karthick", age: 23};
+
+
+// function greet(User : user){
+//     console.log(User.name);
+//     console.log(User.age);
+// }
+// greet(user_one);
+
+
+//----------------------------------------------------------------
+
+
+//function types Examples
+
+function add(a:number, b: number){
+    return a + b;
 }
 
-throwSomeError("hello");
+function printResult(result : number): void{
+    console.log(result);
+}
+
+printResult(add(10,5));
+
+let combineValues : (a: number , b: number) => number;
+// let combineValues : Function;
+// combineValues = add;
+// combineValues = 10;-> it gives error because combineValues assigned as combineValues
+combineValues = add;
+
+console.log(combineValues(8,8));
+
+
+

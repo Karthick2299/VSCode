@@ -350,12 +350,14 @@
 
 //* Enum Example 
 // enum someName{
-//     firstName = 1,
+//     firstName = "karthick",
 //     secondName = 2
 // }
 
 
-// let result_one = someName[1];
+// let result_1_point_one = someName.firstName;
+// console.log(result_1_point_one);
+// let result_one = someName["firstName"];
 // console.log(result_one);
 
 // let result_two = someName.secondName;

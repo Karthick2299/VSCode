@@ -189,18 +189,35 @@
 //     console.log(User.age);
 // }
 // greet(user_one);
-//----------------------------------------------------------------
+/*----------------------------------------------------------------*/
 //function types Examples
-function add(a, b) {
-    return a + b;
-}
-function printResult(result) {
-    console.log(result);
-}
-printResult(add(10, 5));
-var combineValues;
-// let combineValues : Function;
+// function add(a:number, b: number){
+//     return a + b;
+// }
+// function printResult(result : number): void{
+//     console.log(result);
+// }
+// printResult(add(10,5));
+// let combineValues : (a: number , b: number) => number;
+// // let combineValues : Function;
+// // combineValues = add;
+// // combineValues = 10;-> it gives error because combineValues assigned as combineValues
 // combineValues = add;
-// combineValues = 10;-> it gives error because combineValues assigned as combineValues
-combineValues = add;
-console.log(combineValues(8, 8));
+// console.log(combineValues(8,8));
+//never keyword Example using Typescript
+//this function always throw error , it never returns anything. so we put never keyword
+// function generateError(ErrorMessage : string, code: number):never{
+//     throw {message: ErrorMessage, ErrorCode: code};
+// }
+// generateError("Error Occured", 123);
+var array = ["aaa", "bbb", "ccc", true, 431];
+var userData = [123, "karthick"];
+var someName;
+(function (someName) {
+    someName[someName["firstName"] = 1] = "firstName";
+    someName[someName["secondName"] = 2] = "secondName";
+})(someName || (someName = {}));
+var result_one = someName[1];
+console.log(result_one);
+var result_two = someName.secondName;
+console.log(result_two);

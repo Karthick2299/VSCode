@@ -7,7 +7,7 @@
 :root {
     --board-white : white;
     --board-black : rgba(3, 122, 207, 0.683);
-    --ticker-color: transparent;
+    --ticker-color: red;
     --board-marron: #f97375;
     --board-green: #35a24b;
     --board-pink: #ffc0cb;
@@ -78,10 +78,11 @@ body{
 
   .move-ticker {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
-    background-color: var(--ticker-color);
+    background-color:var(--ticker-color);
+    
   }
 
 

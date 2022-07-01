@@ -89,6 +89,7 @@ var MainBoard = (function() {
         }
 
     }
+    
 
     function getActivePlayer(number, playerNumber){
         let active  = number === 6 ? playerNumber : playerNumber % 2 + 1;
@@ -160,7 +161,7 @@ var MainBoard = (function() {
         }
         else{
             let getNewBoardItem = `.board.item - ${playerTwoScore}`;
-           document.querySelector(getNewBoardItem).style.setProperty("--ticker-color", "green");
+           document.querySelector(getNewBoardItem).style.setProperty("--ticker-color", "white");
         }
     }
 

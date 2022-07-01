@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#demo{
+    width:3rem;
+    height:3rem;
+}
+
+.source{
+    width:10rem;
+    height:3rem;
+    background: lightgreen;
+}
+
+.destination{
+    width:10rem;
+    height:3rem;
+    background: lightblue;
+}

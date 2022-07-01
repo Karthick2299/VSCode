@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    /* margin: auto; */
+}
+
+.main-section{
+    width:100vw;
+    height:100vh;
+    background: rgb(125, 123, 123);
+    
+}
+
+.img-section{
+    margin:2rem 0 0 2rem;
+   width:40rem;
+}
+.img-section  img{
+    width:100%;
+}
+.main-number-section{
+    margin:2rem 0 0 2rem;
+    width:40rem;
+    height:40rem;
+    background: rgb(58, 58, 58);
+    position: absolute;
+    top:0;
+    display: flex;
+}
+
+:where(.cell-one,.cell-two,
+.cell-three,.cell-four,.cell-five,
+.cell-six,.cell-seven,.cell-eight,
+.cell-nine,.cell-ten){
+    padding:0;
+    margin:0;
+    border:1px solid white;
+    width:4rem;
+    height:4rem;
+    background: black;
+    display: none;
+}
+
+.row-1 .Ninety span{
+    display: block;
+    width:2rem;
+    height:2rem;
+    border-radius:50%;
+    background: rgb(255, 255, 255);
+}
+
+.side-section{
+    position: absolute;
+    left:40%;
+    top:3%;
+    /* background: #000; */
+    border:1px solid pink;
+    width:40rem;
+    height:40rem;
+}
+
+.dice{
+     display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    text-transform: uppercase;
+}
+
+.side-section .dice h2{
+    width:100%;
+    height:7rem;
+    background: #000;
+    position: relative;
+    color:white;
+    padding:2rem;
+    border-bottom: 2px solid white;
+}
+
+.side-section .dice h2 span{
+    background: rgb(101, 206, 108);
+    width:3rem;
+    height:3rem;
+    display: inline-block;
+    position: absolute;
+    top:25%;
+    text-align: center;
+    margin-left:1rem;
+    border-radius: 50%;
+   
+    
+}
+#dice-result{
+    
+    padding-top:0.3rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+

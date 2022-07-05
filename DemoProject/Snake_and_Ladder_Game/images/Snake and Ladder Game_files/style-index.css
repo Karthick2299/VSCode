@@ -5,9 +5,6 @@
     font-family: 'Poppins';
 
 }
-:root{
-    --bg-color: red;
-}
 
 body{
     width:100vw;
@@ -23,7 +20,7 @@ body{
     width:100vw;
     height:100vh;
     background: grey;
-    
+
     
 }
 
@@ -41,8 +38,7 @@ body{
     margin:2rem 0 0 2rem;
     width:40rem;
     height:40rem;
-    background-color: rgb(84, 82, 82);
-    /* background: transparent; */
+    background: rgb(58, 58, 58);
     position: absolute;
     top:0;
     display: flex;
@@ -85,7 +81,7 @@ body{
 }
 
 .active{
-    background: var(--bg-color);
+    background: red;
 }
 
 
@@ -97,7 +93,7 @@ body{
     border:1px solid pink;
     width:40rem;
     height:40rem;
-    /* display: none; */
+    display: none;
 }
 
 .dice{

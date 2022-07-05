@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake and Ladder Game</title>
-    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="./Snake and Ladder Game_files/style-index.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Snake and Ladder Game_files/css2" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./Snake and Ladder Game_files/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
 
 </head>
@@ -21,7 +21,7 @@
     <div class="main-section">
 
         <div class="img-section">
-            <img src="./images/game-image.png" alt="Snake and Ladder Game">
+            <img src="./Snake and Ladder Game_files/game-image.png" alt="Snake and Ladder Game">
         </div>
 
 
@@ -67,16 +67,16 @@
             </div>
 
             <div class="row-seven">
-                <div id="61" class="seventh-block number number-seventy-one">61</div>
-                <div id="62" class="seventh-block number number-seventy-two">62</div>
-                <div id="63" class="seventh-block number number-seventy-three">63</div>
-                <div id="64" class="seventh-block number number-seventy-four">64</div>
-                <div id="65" class="seventh-block number number-seventy-five">65</div>
-                <div id="66" class="seventh-block number number-seventy-six">66</div>
-                <div id="67" class="seventh-block number number-seventy-seven">67</div>
-                <div id="68" class="seventh-block number number-seventy-eight">68</div>
-                <div id="69" class="seventh-block number number-seventy-nine">69</div>
-                <div id="70" class="seventh-block number seventh-end number-seventy">70</div>
+                <div id="61" class="eighth-block number number-seventy-one">61</div>
+                <div id="62" class="eighth-block number number-seventy-two">62</div>
+                <div id="63" class="eighth-block number number-seventy-three">63</div>
+                <div id="64" class="eighth-block number number-seventy-four">64</div>
+                <div id="65" class="eighth-block number number-seventy-five">65</div>
+                <div id="66" class="eighth-block number number-seventy-six">66</div>
+                <div id="67" class="eighth-block number number-seventy-seven">67</div>
+                <div id="68" class="eighth-block number number-seventy-eight">68</div>
+                <div id="69" class="eighth-block number number-seventy-nine">69</div>
+                <div id="70" class="eighth-block number seventh-end number-seventy">70</div>
             </div>
 
             <div class="row-six">
@@ -145,9 +145,9 @@
             </div>
 
             
-            <div id="row-one" class="row-one">
+            <div class="row-one">
                 <div id="1" class=" active first-block number number-one">
-                    <span id="move-icon" >1</span>
+                    <span id="move-icon">1</span>
                 </div>
 
                 <div id="2" class="first-block number number-two">2</div>
@@ -187,6 +187,43 @@
         
     </div>
 
-    <script src="index.js"></script>
-</body>
-</html>
+    <script src="./Snake and Ladder Game_files/index.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

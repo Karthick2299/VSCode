@@ -10,11 +10,12 @@ var divTagSeven = document.querySelector(".seventh-block");
 var divTagEight = document.querySelector(".eighth-block");
 var divTagNine = document.querySelector(".nineth-block");
 var divTagTen = document.querySelector(".ten-block");
-
+var mainDiv = document.querySelector(".main-number-section");
+var player = document.getElementById("display-player");
 //button Tag
 var buttonTag = document.querySelector("button");
 //active class
-var  activeClass = document.querySelector(".active");
+var activeClass = document.querySelector(".active");
 
 //icon id
 
@@ -33,227 +34,165 @@ var row_one = document.querySelector(".row-one");
 // console.log(row_one);
 //random function variable
 
-var randomNumber = () => {return Math.floor(Math.random() * 6 + 1)}
-
-var getNumbers;
-
 var selectDivTags = document.querySelectorAll(".number");
 //to display which player's turn
 var playerOne = document.getElementById("currentPlayerOne");
 var playerTwo = document.getElementById("currentPlayerTwo");
 var currentPlayerOne = 0;
 var currentPlayerTwo = 0;
-var currentPlayerScore = 0;
+var currentPlayerScoreOne = 0;
+var currentPlayerScoreTwo =0;
+
+var randomNumber;//global variable
+
+function gettingRandom() {
+    // var localRandom = Math.floor(Math.random() * 6 + 1);
+    // return localRandom;
+
+    randomNumber = Math.floor(Math.random() * 6 + 1);
+}
+
+//get Random function{
 
 
 
+function getRandom(checkFirst,checkSecond) {
+    //var randomNumber = gettingRandom() - for random Number function scope.
+  //  var getReturn = gettingRandom(); //function call to get random number
 
-// console.log(selectDivTags);
-//checking initial value
+  gettingRandom();
+   document.getElementById("dice-result").innerHTML = randomNumber;
+   console.log("get Return variable " + randomNumber);
+  
 
-// function initialChecking(currentPlayerOne, currentPlayerTwo){
-//     if(currentPlayerOne === 0 && currentPlayerTwo === 0){
-//         console.log("Both Players initial value is Zero.");
-//     }
-// }
+  // value += randomNumber;
+  if(checkFirst === true){
+  currentPlayerScoreOne += randomNumber;
+  }
+  if(checkSecond === true){
+    currentPlayerScoreTwo += randomNumber;
+  }
+  
+//   currentPlayerScore = 323;
+  console.log("currentPlayerScore " + currentPlayerOne);
+  // console.log("currentPlayerScore " + currentPlayerOne);
+  //printing random numbers
 
-// initialChecking(currentPlayerOne, currentPlayerTwo);
+  //call the conditionFunction
+  conditionFunction(/*getReturn*/);
 
-// console.log(playerOne);
-// console.log(playerTwo);
+  // return value;
 
+}
+
+//condition function
+
+function conditionFunction() {
+  try {
+    let total = 100;
+    //it adds the active class to the div tags..in a incrementing order.
+
+    if (currentPlayerScoreOne === currentPlayerOne) {
+      if (
+        currentPlayerOne !== randomNumber ||
+        (currentPlayerOne === randomNumber && randomNumber <= total)
+      ) {
+        $(`#${currentPlayerOne}`)
+          .addClass("active-1")
+          .siblings()
+          .removeClass("active-1");
+
+        if (currentPlayerOne + randomNumber >= 100) {
+          Math.floor(Math.random() * 1 + 1);
+        }
+
+        console.log("normal if is working");
+
+        // checkToRemoveClass(currentPlayerOne);
+      }
+    } else if (currentPlayerScoreTwo === currentPlayerTwo){
+      if (
+        currentPlayerTwo !== randomNumber ||
+        (currentPlayerTwo === randomNumber && randomNumber <= total)
+      ) {
+        $(`#${currentPlayerTwo}`)
+          .addClass("active-2")
+          .siblings()
+          .removeClass("active-2");
+
+        if (currentPlayerTwo + randomNumber >= 100) {
+          Math.floor(Math.random() * 1 + 1);
+        }
+
+        console.log("normal if is working of else condition");
+
+        // checkToRemoveClass(currentPlayerTwo);
+      }
+    }
+
+    // callingSwitchCase(currentPlayerOne);
+  } catch (error) {
+    console.log(error);
+  }
+  // return newInputVariable;
+}
+
+//calling getRandom function
 // buttonTag.addEventListener("click", getRandom);
 
+//need to fix this
 
-// console.log($(randomNumber));
-
-// var element = $("#move-icon").attr("id");
-
-// console.log(element);
-
-// function addingScores(currentPlayerOne, currentPlayerScore,randomNumber ){
-//     currentPlayerScore +=   randomNumber;
-//     console.log(currentPlayerScore);
-
-//     if(currentPlayerScore === randomNumber){
-//         console.log("its working");
-//     }
-
+// function checkToRemoveClass(player){
+//     if (player > 10) {
+//         if(firstRow.classList.contains("active")){
+//             $("#row-one").toggleClass("active");
+//             console.log("nested if is working");
+//         }
+//       }
 // }
+//}
 
-// addingScores(0,0,randomNumber());
+//Player One
 
-function gettingRandom(){
-    return getNumbers = Math.floor(Math.random() * 6 + 1);
-};
+function firstPlayer() {
+  var checkFirst = true;
 
-
-function getRandom(){
-    gettingRandom();
+    console.log("first player function called");
     
-    let length = divTagOne.length;
+    // var onePlayer;
+    //calling getRandom function
+    // var playerOneRandom = getRandom();
+    getRandom(checkFirst);
     
-    currentPlayerOne += getNumbers;
-    console.log(currentPlayerOne);
+    currentPlayerOne += randomNumber;
+    console.log( "playerOne Score " + currentPlayerOne);
+
+    //display the player
+    player.innerHTML = currentPlayerOne;
+
+  //call the conditionFunction
+  conditionFunction();
+
+  //printing random numbers
+  document.getElementById("dice-result").innerHTML = randomNumber;
+  // return playerOneRandom;
+}
+//Player Two
+
+function secondPlayer() {
+
+    console.log("second player function called");
     
+    var checkSecond = true;
+    
+    //calling getRandom function
+    // var playerTwo = getRandom(secondPlayer);
+    getRandom(checkSecond);
+    currentPlayerTwo += randomNumber;
     //call the conditionFunction
-    conditionFunction(currentPlayerOne);
-    
-    //printing random numbers
-    document.getElementById("dice-result").innerHTML = getNumbers;
-    
-      // if(currentPlayerOne === getNumbers){
-          //         playerOne.classList.add("active");     
-          //     console.log("if statement is working");
-          // }
-          
-        // else{
-            //     playerOne.classList.remove("active");
-            //     console.log("else statement is working");
-            // }
-            
-            // console.log(divTagOne);
-            
-            // console.log(getNumbers);
-            
-            
-            
-            // var sum = 0;
-            
-            // sum = sum + currentPlayerOne;
-            // console.log("sum value " + sum);
-            
-            
-            // let add = 0;
-            
-            // add = add + sum;
-            // console.log(add)
-            
-            // sumPlayerOneValues(currentPlayerOne);
-         
-        }
+    conditionFunction(currentPlayerTwo);
+    console.log(currentPlayerTwo);
 
-        function conditionFunction(){
-
-            try{
-                let total = 100;
-               //it adds the active class to the div tags..in a incrementing order.
-
-            if(currentPlayerOne !== getNumbers || currentPlayerOne === getNumbers && getNumbers <= total){
-                $(`#${currentPlayerOne}`).addClass("active").siblings().removeClass("active");
-
-                if(currentPlayerOne + getNumbers >= 100){
-                    Math.floor(Math.random() * 1 + 1);
-                }
-            }
-
-            if(currentPlayerOne > 100){
-                $(".ten-block").removeClass("active");
-                console.log("It worked");
-            }
-
-            // else{
-            //     $(`#${currentPlayerOne}`).removeClass("active");
-            // }
-            //  if((currentPlayerOne + getNumbers) >= 90 && (currentPlayerOne + getNumbers) <= 100) {
-            //     let sum = currentPlayerOne + getNumbers;
-            //     console.log("sum value is " + sum)
-            //     sum = Math.floor(Math.random() * 2 + 1);
-            //     currentPlayerOne + getNumbers;
-            // }
-
-            // clearPrevious(getNumbers);
-            
-            // else if(currentPlayerOne + getNumbers === 100) {
-            //     throw new Error("Game Finished");
-            //     // console.log("game finished");
-            // }
-
-        }
-
-
-
-        catch(error){
-            console.log(error);
-        }
-
-            
-        }
-
-
-        // function clearPrevious(getNumbers){
-        //     if(getNumbers > 0){
-        //         let getItems = `${getNumbers}`;
-        //         return document.querySelector(getItems)
-        //         .style.setProperty("--bg-color", "transparent");
-        //     }
-        // }
-
-        buttonTag.addEventListener("click",getRandom);
-        // getRandom();
-        
-            // if(divTagTwo.classList.contains("active")){
-            
-              
-                //     divTagTwo.classList.add("active");
-                //     divTagTwo.classList.remove("active");
-                
-                // }
-            // for(let i = 0; i <= 10; i++)
-            
-            // let sum = 0;
-            
-            
-            
-            // buttonTag.addEventListener("click", rollingDice);
-            
-            // function getBoardPosition(){
-                
-                
-                // }
-                // getBoardPosition();
-                
-                
-                // let getNumber;
-                
-                // let currentPlayerOne = 0, currentPlayerTwo = 0;
-                
-                
-//                 function rollingDice(){
-                    
-
-
-
-//     //to avoid zero we have to add one in the Random function
-//     //So It generates the dice value within 6.i.e(includes six)
-
-   
-  
-// }
-
-
-
-// var firstNumber = document.querySelector(".number-one");
-// var secondNumber = document.querySelector(".number-two")
-
-// var Number = document.querySelectorAll("number");
-// buttonTag.addEventListener("click", checkFunction);
-
-
-// function checkFunction(){
-
-//     let getPosition = $("1");
-
-//     console.log(getPosition);
-
-// }
-
-
-
-
-
-
-
-//prints the random Number
-
-// console.log(getRandomNumber);
+  //printing random numbers
+  document.getElementById("dice-result").innerHTML = currentPlayerTwo;
+}

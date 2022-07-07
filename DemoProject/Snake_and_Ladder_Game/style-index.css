@@ -45,8 +45,12 @@ body{
     /* background: transparent; */
     position: absolute;
     top:0;
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+    grid-template: repeat(10, 64px) / repeat(10, 64px);
+
+    /* display: flex;
+    flex-direction: row; */
     /* display: none; */
     
 }
@@ -57,9 +61,9 @@ body{
 .cell-nine,.cell-ten){
     padding:0;
     margin:0;
-    border:1px solid white;
-    width:4rem;
-    height:4rem;
+    /* border:1px solid white; */
+    width:2rem;
+    height:2rem;
     background: rgb(125, 72, 72);
 }
 
@@ -73,6 +77,7 @@ body{
 .row-seven,.row-eight,.row-nine,
 .row-ten{
     display: flex;
+    
 }
 
 .ten-block,.nineth-block,
@@ -84,8 +89,15 @@ body{
     
 }
 
-.active{
-    background: var(--bg-color);
+.active-1{
+    background: url("./images/chess-piece.png") center/contain;
+    background-color: white;
+    
+}
+
+.active-2{
+    background: url("./images/pawn.png") center/contain;
+    background-color: white;
 }
 
 
@@ -152,8 +164,25 @@ body{
     background-color: lightgreen;
     color:black;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    
+}
+
+.button-section button{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  
+}
+.btn-1:hover{
+    background-color: rgb(0, 128, 51);
+    color:white;
+}
+.btn-2:hover{
+    background-color: rgb(200, 130, 238);
+    color: rgb(255, 255, 255);
 }
 .dice-button{
     vertical-align: middle;
@@ -167,3 +196,19 @@ body{
     font-size:1.2rem;
 }
 
+.game-result{
+    width:100%;
+    height:20%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#show-winning{
+    font-weight: 300;
+    font-size: 1rem;
+}

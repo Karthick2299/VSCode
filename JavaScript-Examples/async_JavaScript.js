@@ -269,7 +269,7 @@ async function showingResult(){
     let result = await examplePromise;
 
     console.log(result);
-    console.log("it Prints first");
+    console.log("it Prints first");//it prints after 4 seconds
     console.log(examplePromise);
 
 }

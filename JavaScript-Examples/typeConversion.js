@@ -23,5 +23,15 @@
 
 // console.log(typeof(stringCoversion));
 
+//type Conversion Example
+
+let variable = 123;
+
+console.log("Before Conversion : " + typeof(variable));
+
+let stringVariable = String(variable);
+
+console.log("After Conversion : " + typeof(stringVariable));
+
 
 

@@ -170,10 +170,59 @@ var emptyString = "";
 
 // console.log(emptyString);
 
+//butterfly pattern
 
+// for(let row = 1; row < n; row++){
+//     for(let col = 1; col <= row; col++){
+//         emptyString += "*"
+//     }
 
+//     for(let col = row; col < n; col++){
+//         emptyString += " ";
+//     }
+    
+//     for(let col = row; col <= n; col++){
+//         emptyString += " ";
+//     }
+//     for(let col = 1; col <= row; col++){
+//         emptyString += "*"
+//     }
+
+//     emptyString += "\n";
+// }
+
+// for(let row = 1; row <= n; row++){
+//     for(let col = row; col <= n; col++){
+//         emptyString += "*"
+//     }
+
+//     for(let col = 1; col < row; col++){
+//         emptyString += " "
+//     }
+//     for(let col = 1; col <= row; col++){
+//         emptyString += " ";
+//     }
+
+//     for(let col = row; col <= n; col++){
+//         emptyString += "*";
+//     }
+
+//     emptyString += "\n";
+// }
 
 // console.log(emptyString);
+
+
+//star shaped pattern
+
+for(let row = 1; row <= n; row++){
+    for(let col = row; col <= n; col++){
+        emptyString += "*"
+    }
+    emptyString += "\n"; 
+}
+
+console.log(emptyString);
 
 //print pattern in html
 

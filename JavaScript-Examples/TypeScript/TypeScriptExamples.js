@@ -210,14 +210,86 @@
 //     throw {message: ErrorMessage, ErrorCode: code};
 // }
 // generateError("Error Occured", 123);
-var array = ["aaa", "bbb", "ccc", true, 431];
-var userData = [123, "karthick"];
-var someName;
-(function (someName) {
-    someName[someName["firstName"] = 1] = "firstName";
-    someName[someName["secondName"] = 2] = "secondName";
-})(someName || (someName = {}));
-var result_one = someName[1];
-console.log(result_one);
-var result_two = someName.secondName;
-console.log(result_two);
+//*tuple Example
+// const array : any[] = ["aaa","bbb","ccc",true,431]
+// let userData : [number , string] = [123,"karthick"] ;
+//* Enum Example 
+// enum someName{
+//     firstName = "karthick",
+//     secondName = 2
+// }
+// let result_1_point_one = someName.firstName;
+// console.log(result_1_point_one);
+// let result_one = someName["firstName"];
+// console.log(result_one);
+// let result_two = someName.secondName;
+// console.log(result_two);
+//* Arrow function Example in Typescript
+// const printOutput = () => { return console.log("from arrow function");};
+// printOutput();
+//arrow function Example
+// const add = (numberOne:number , numberTwo:number) => {
+//     return numberOne + numberTwo;
+// }
+// console.log(add(2,2));
+//Rest parameters Example
+// const add = (...numbers:number[]) => {
+//     return numbers.reduce((curResult , curValue) => {
+//         return curResult + curValue;
+//     });
+// }
+// const addNumbers = add(2,2,2,2,2);
+// console.log(addNumbers);
+//Destructuring Array - It means Pulling elements out of the Array.
+//*Interface Examples in Ts
+// interface Example{
+//     id: number;
+//     FirstName: string;
+// }
+// let Ex_one: Example = {id : 1, FirstName: "karthick"};
+// console.log(Ex_one);
+//*Class Example in Ts
+// class Department {
+//     name: string;
+//     constructor(n: string){
+//         this.name = n;
+//     }
+// }
+// const accounting = new Department("constructor Called");
+// console.log(accounting);
+// class Example in typeScript
+// class Department {
+//     name: string;
+//     constructor(n: string){
+//         this.name = n;
+//     }
+//     describe(this: Department){
+//         console.log("Department : " + this.name);
+//     }
+// }
+// const exampleObj = new Department("Karthick");
+// exampleObj.describe();
+//class Example 2 
+// class ExampleClass{
+//     firstName: string;
+//     id: number;
+//     constructor(name: string, id: number){
+//         this.firstName = name;
+//         this.id = id;
+//     }
+//     description(this: ExampleClass){
+//         console.log("FirstName is : " + this.firstName);
+//         console.log("Id is : " + this.id);
+//     }
+// }
+// const exampleObj = new ExampleClass("karthick",123);
+// exampleObj.description();
+//! rest paraemter Example using TS
+var Greet = function (greeting) {
+    var names = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        names[_i - 1] = arguments[_i];
+    }
+    return greeting + " " + names.join(", ");
+};
+console.log(Greet("karthick", "Divine", "Steffi"));

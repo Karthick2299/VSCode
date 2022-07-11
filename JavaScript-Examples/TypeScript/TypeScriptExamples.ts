@@ -362,3 +362,112 @@
 
 // let result_two = someName.secondName;
 // console.log(result_two);
+
+
+//* Arrow function Example in Typescript
+
+// const printOutput = () => { return console.log("from arrow function");};
+
+// printOutput();
+
+//arrow function Example
+
+// const add = (numberOne:number , numberTwo:number) => {
+//     return numberOne + numberTwo;
+// }
+
+// console.log(add(2,2));
+
+//Rest parameters Example
+
+// const add = (...numbers:number[]) => {
+//     return numbers.reduce((curResult , curValue) => {
+//         return curResult + curValue;
+//     });
+// }
+
+// const addNumbers = add(2,2,2,2,2);
+// console.log(addNumbers);
+
+//Destructuring Array - It means Pulling elements out of the Array.
+
+
+//*Interface Examples in Ts
+
+// interface Example{
+//     id: number;
+//     FirstName: string;
+// }
+
+// let Ex_one: Example = {id : 1, FirstName: "karthick"};
+
+// console.log(Ex_one);
+
+
+//*Class Example in Ts
+
+// class Department {
+//     name: string;
+
+//     constructor(n: string){
+//         this.name = n;
+//     }
+// }
+
+
+// const accounting = new Department("constructor Called");
+
+// console.log(accounting);
+
+// class Example in typeScript
+
+// class Department {
+//     name: string;
+
+//     constructor(n: string){
+//         this.name = n;
+//     }
+
+//     describe(this: Department){
+//         console.log("Department : " + this.name);
+//     }
+// }
+
+// const exampleObj = new Department("Karthick");
+
+// exampleObj.describe();
+
+
+//class Example 2 
+
+// class ExampleClass{
+//     firstName: string;
+//     id: number;
+//     constructor(name: string, id: number){
+//         this.firstName = name;
+//         this.id = id;
+
+//     }
+
+//     description(this: ExampleClass){
+//         console.log("FirstName is : " + this.firstName);
+//         console.log("Id is : " + this.id);
+//     }
+// }
+
+
+// const exampleObj = new ExampleClass("karthick",123);
+
+// exampleObj.description();
+
+//! rest paraemter Example using TS
+
+// let Greet = (greeting: string, ...names: string[]) => {
+//     return greeting + " " + names.join(", ");
+// }
+
+// console.log(Greet("karthick", "hello", "Batman"));
+
+
+
+

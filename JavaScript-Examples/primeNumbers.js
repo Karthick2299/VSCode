@@ -1,4 +1,4 @@
-var num = 23;
+var num = 22;
 checkPrime = true;
 
 if (num === 1) {

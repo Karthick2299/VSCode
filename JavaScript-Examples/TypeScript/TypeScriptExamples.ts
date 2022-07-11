@@ -48,6 +48,10 @@
 // const users: string[] = ["karthick","heisenberg"];
 // console.log(users);
 
+/* Tuples is a typed array with the pre - defined length and types for each other.
+to define a Tuple , specify the type of each element in the array */
+
+
 //tuple Example using typescript
 
 // let ourTuple: [number , number , string];

@@ -103,29 +103,97 @@
 
 //*Inheritance Example in Ts
 
-class Department{
-    protected employees: string[] = [];
+// class Department{
+//     protected employees: string[] = [];
 
-    constructor(protected  id: string, public name: string){
-        console.log("from Department class Constructor");
-        this.id = id;
-        this.name = name;
+//     constructor(protected  id: string, public name: string){
+//         console.log("from Department class Constructor");
+//         this.id = id;
+//         this.name = name;
+//     }
+
+
+//     describe(this: Department){
+//         // console.log(`Department (${this.id}): ${this.name}`);
+//         console.log("from describe method");
+
+//     }
+
+//     addEmployee(employee: string){
+//         console.log("Employee Added");
+//     }
+
+// }
+
+
+// const a = new Department("1","karthick");
+
+// a.describe();
+
+
+//getter and setter Example in Ts
+
+//In Typescript getter and setter has different names.
+
+//*Getter - Accessor | Setter - Mutator.
+
+// class Developer{
+//     private lang: string = " ";
+//     private task: string[] = [];
+
+//     get language(){
+//         return this.lang;
+//     }
+//     set language(value: string){
+//          this.lang = value;
+//     }
+
+//     get tasks(){
+//         return this.task;
+//     }
+
+//     set tasks(values: string[]){
+//         this.task = values;
+//     }
+
+
+// }
+
+// const dev = new Developer();
+
+// dev.language = "java";
+
+// dev.tasks = ["code", "debug"];
+
+// console.log("Lanuguages : " + dev.language);
+// console.log("tasks are : " + dev.tasks);
+
+
+//static method Example in Ts
+
+
+class ExampleClass{
+
+    //static variable 
+    static someName = "Thanos";
+
+    static checkStatic(value: string){
+        console.log(value);
     }
 
-
-    describe(this: Department){
-        // console.log(`Department (${this.id}): ${this.name}`);
-        console.log("from describe method");
-
-    }
-
-    addEmployee(employee: string){
-        console.log("Employee Added");
+    static anotherStatic(inputOne: number , inputTwo: number): number{
+        console.log("static method called");
+        return inputOne + inputTwo;
     }
 
 }
 
 
-const a = new Department("1","karthick");
+const classObj = new ExampleClass();
 
-a.describe();
+const newObj = ExampleClass.checkStatic("karthick");
+
+const e1 = ExampleClass.anotherStatic(2,2);
+console.log(e1);
+console.log("static variable : " + ExampleClass.someName);
+

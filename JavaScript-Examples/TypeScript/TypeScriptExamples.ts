@@ -473,5 +473,30 @@ to define a Tuple , specify the type of each element in the array */
 // console.log(Greet("karthick", "hello", "Batman"));
 
 
+//function type - never - It always throw error
 
+// function throwError(errorMsg: string): never{
+//     throw new Error(errorMsg);
+// }
+// throwError("Something went Wrong");
+
+
+// function exampleFunction(message: string): void{
+//     console.log("its void function, so it returns nothing.")
+// }
+
+// exampleFunction("hi");
+
+
+//function Overloading
+
+function doSomeCalc(a: any, b: any): any {
+    return a + b;
+}
+
+var result_1 = doSomeCalc("Hi" , " Karthick");
+var result_2 = doSomeCalc(5, 3);
+
+console.log(result_1);
+console.log(result_2);
 

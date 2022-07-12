@@ -29,6 +29,8 @@
 //array Example using tyepscript
 // const users: string[] = ["karthick","heisenberg"];
 // console.log(users);
+/* Tuples is a typed array with the pre - defined length and types for each other.
+to define a Tuple , specify the type of each element in the array */
 //tuple Example using typescript
 // let ourTuple: [number , number , string];
 // ourTuple = [2, 3, "someString"];
@@ -285,11 +287,24 @@
 // const exampleObj = new ExampleClass("karthick",123);
 // exampleObj.description();
 //! rest paraemter Example using TS
-var Greet = function (greeting) {
-    var names = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        names[_i - 1] = arguments[_i];
-    }
-    return greeting + " " + names.join(", ");
-};
-console.log(Greet("karthick", "Divine", "Steffi"));
+// let Greet = (greeting: string, ...names: string[]) => {
+//     return greeting + " " + names.join(", ");
+// }
+// console.log(Greet("karthick", "hello", "Batman"));
+//function type - never - It always throw error
+// function throwError(errorMsg: string): never{
+//     throw new Error(errorMsg);
+// }
+// throwError("Something went Wrong");
+// function exampleFunction(message: string): void{
+//     console.log("its void function, so it returns nothing.")
+// }
+// exampleFunction("hi");
+//function Overloading
+function doSomeCalc(a, b) {
+    return a + b;
+}
+var result_1 = doSomeCalc("Hi", " Karthick");
+var result_2 = doSomeCalc(5, 3);
+console.log(result_1);
+console.log(result_2);

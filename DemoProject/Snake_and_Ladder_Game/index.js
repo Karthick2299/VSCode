@@ -60,17 +60,21 @@ function getRandom(checkFirst,checkSecond) {
     //var randomNumber = gettingRandom() - for random Number function scope.
   //  var getReturn = gettingRandom(); //function call to get random number
 
-  gettingRandom();
-   document.getElementById("dice-result").innerHTML = randomNumber;
-   console.log("get Return variable " + randomNumber);
+
+  var randomNum = gettingRandom();
+  console.log("random number is : " + randomNum);
+
+  // gettingRandom();
+   document.getElementById("dice-result").innerHTML = randomNum;
+   console.log("get Return variable " + randomNum);
   
 
   // value += randomNumber;
   if(checkFirst === true){
-  currentPlayerScoreOne += randomNumber;
+  currentPlayerScoreOne += randomNum;
   }
-  if(checkSecond === true){
-    currentPlayerScoreTwo += randomNumber;
+  else if(checkSecond === true){
+    currentPlayerScoreTwo += randomNum;
   }
   
 //   currentPlayerScore = 323;
@@ -183,16 +187,16 @@ function secondPlayer() {
 
     console.log("second player function called");
     
-    var checkSecond = true;
+  var checkSecond = true;
     
     //calling getRandom function
     // var playerTwo = getRandom(secondPlayer);
     getRandom(checkSecond);
     currentPlayerTwo += randomNumber;
     //call the conditionFunction
-    conditionFunction(currentPlayerTwo);
     console.log(currentPlayerTwo);
+    conditionFunction(currentPlayerTwo);
 
   //printing random numbers
-  document.getElementById("dice-result").innerHTML = currentPlayerTwo;
+  document.getElementById("dice-result").innerHTML = randomNumber;
 }

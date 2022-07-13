@@ -5,7 +5,8 @@ var Square = /** @class */ (function () {
     Square.prototype.doCalculation = function () {
         var side = 4;
         var calc = side * side;
-        console.log("The result is : " + calc);
+        console.log("Side value is : ".concat(side));
+        console.log("Area od Square is : " + calc);
     };
     return Square;
 }());
@@ -17,6 +18,7 @@ var Rectangle = /** @class */ (function () {
         var height = 2;
         var breadth = 4;
         var result = height * breadth;
+        console.log("length is : ".concat(height, " and Breadth is : ").concat(breadth));
         console.log("Area of Rectangle is : " + result);
     };
     return Rectangle;
@@ -28,6 +30,7 @@ var Circle = /** @class */ (function () {
     Circle.prototype.doCalculation = function () {
         var radius = 6;
         var result = 3.14 * (radius * radius);
+        console.log("Radius Value is : ".concat(radius));
         console.log("Area of Circle is : " + result);
     };
     return Circle;

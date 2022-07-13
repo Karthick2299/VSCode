@@ -13,7 +13,8 @@ class Square implements shapes{
     doCalculation():void{
         let side = 4;
         let calc = side * side;
-       console.log("The result is : " + calc);
+        console.log(`Side value is : ${side}`)
+       console.log("Area od Square is : " + calc);
     }
 
     
@@ -30,6 +31,7 @@ doCalculation(): void {
     let breadth = 4;
 
      let result = height * breadth;
+     console.log(`length is : ${height} and Breadth is : ${breadth}`);
     console.log("Area of Rectangle is : " + result);
 }
 
@@ -40,7 +42,9 @@ doCalculation(): void {
 class Circle implements shapes{
     doCalculation(): void {
         let radius = 6;
+
         let result = 3.14 * (radius * radius);
+        console.log(`Radius Value is : ${radius}`);
         console.log("Area of Circle is : " + result);
     }
 }

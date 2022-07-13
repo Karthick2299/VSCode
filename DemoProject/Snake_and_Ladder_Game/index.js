@@ -45,11 +45,12 @@ var currentPlayerScoreTwo =0;
 
 var randomNumber;//global variable
 
-function gettingRandom() {
+function gettingRandom(randomNum) {
     // var localRandom = Math.floor(Math.random() * 6 + 1);
     // return localRandom;
 
-    randomNumber = Math.floor(Math.random() * 6 + 1);
+    randomNum = Math.floor(Math.random() * 6 + 1);
+    return randomNum;
 }
 
 //get Random function{
@@ -60,6 +61,8 @@ function getRandom(checkFirst,checkSecond) {
     //var randomNumber = gettingRandom() - for random Number function scope.
   //  var getReturn = gettingRandom(); //function call to get random number
 
+  checkFirst = 1;
+  checkSecond = 2;
 
   var randomNum = gettingRandom();
   console.log("random number is : " + randomNum);
@@ -70,33 +73,34 @@ function getRandom(checkFirst,checkSecond) {
   
 
   // value += randomNumber;
-  if(checkFirst === true){
+  if(checkFirst === 1){
   currentPlayerScoreOne += randomNum;
+  console.log("currentPlayerOneScore " + currentPlayerScoreOne);
   }
-  else if(checkSecond === true){
+  if(checkSecond === 2){
     currentPlayerScoreTwo += randomNum;
+    console.log("currentPlayerTwoScore " + currentPlayerScoreTwo);
   }
   
 //   currentPlayerScore = 323;
-  console.log("currentPlayerScore " + currentPlayerOne);
   // console.log("currentPlayerScore " + currentPlayerOne);
   //printing random numbers
 
   //call the conditionFunction
-  conditionFunction(/*getReturn*/);
+  conditionFunction(randomNum, checkFirst, checkSecond);
 
-  // return value;
+  return randomNum;
 
 }
 
 //condition function
 
-function conditionFunction() {
+function conditionFunction(randomNumber, firstPlayer, secondPlayer) {
   try {
     let total = 100;
     //it adds the active class to the div tags..in a incrementing order.
 
-    if (currentPlayerScoreOne === currentPlayerOne) {
+    if (firstPlayer == 1) {
       if (
         currentPlayerOne !== randomNumber ||
         (currentPlayerOne === randomNumber && randomNumber <= total)
@@ -110,11 +114,13 @@ function conditionFunction() {
           Math.floor(Math.random() * 1 + 1);
         }
 
-        console.log("normal if is working");
+        console.log("first player condition is working.");
 
         // checkToRemoveClass(currentPlayerOne);
       }
-    } else if (currentPlayerScoreTwo === currentPlayerTwo){
+    } 
+     
+     if (secondPlayer >= 2){
       if (
         currentPlayerTwo !== randomNumber ||
         (currentPlayerTwo === randomNumber && randomNumber <= total)
@@ -128,7 +134,7 @@ function conditionFunction() {
           Math.floor(Math.random() * 1 + 1);
         }
 
-        console.log("normal if is working of else condition");
+        console.log("second player condition is working.");
 
         // checkToRemoveClass(currentPlayerTwo);
       }
@@ -159,26 +165,28 @@ function conditionFunction() {
 //Player One
 
 function firstPlayer() {
-  var checkFirst = true;
+  var checkFirst;
+
+  var checkPlayerOne = 1;
 
     console.log("first player function called");
     
     // var onePlayer;
     //calling getRandom function
     // var playerOneRandom = getRandom();
-    getRandom(checkFirst);
+    var random = getRandom(checkFirst);
+    document.getElementById("dice-result").innerHTML = random;
     
-    currentPlayerOne += randomNumber;
+    currentPlayerOne += random;
     console.log( "playerOne Score " + currentPlayerOne);
 
     //display the player
     player.innerHTML = currentPlayerOne;
 
   //call the conditionFunction
-  conditionFunction();
+  conditionFunction(checkPlayerOne);
 
   //printing random numbers
-  document.getElementById("dice-result").innerHTML = randomNumber;
   // return playerOneRandom;
 }
 //Player Two
@@ -187,16 +195,16 @@ function secondPlayer() {
 
     console.log("second player function called");
     
-  var checkSecond = true;
-    
-    //calling getRandom function
-    // var playerTwo = getRandom(secondPlayer);
-    getRandom(checkSecond);
-    currentPlayerTwo += randomNumber;
+  var checkSecond;
+  var checkPlayerTwo = 2;
+  //calling getRandom function
+  // var playerTwo = getRandom(secondPlayer);
+  var randomSecond = getRandom(checkSecond);
+  document.getElementById("dice-result").innerHTML = randomSecond;
+    currentPlayerTwo += randomSecond;
     //call the conditionFunction
-    console.log(currentPlayerTwo);
-    conditionFunction(currentPlayerTwo);
+    console.log("second player score " + currentPlayerTwo);
+    conditionFunction(checkPlayerTwo);
 
   //printing random numbers
-  document.getElementById("dice-result").innerHTML = randomNumber;
 }

@@ -1,4 +1,4 @@
-interface shapes{
+interface Shapes{
 
     
     doCalculation():void;
@@ -6,7 +6,7 @@ interface shapes{
 }
 
 
-class Square implements shapes{
+class Square implements Shapes{
 
     //area of a Square => side x side;
 
@@ -24,7 +24,7 @@ class Square implements shapes{
 
 //area of rectangle => length x breadth
 
-class Rectangle implements shapes{
+class Rectangle implements Shapes{
  
 doCalculation(): void {
     let height = 2;
@@ -39,7 +39,7 @@ doCalculation(): void {
 
 //area of circle => pi x (rdaius x radius)
 
-class Circle implements shapes{
+class Circle implements Shapes{
     doCalculation(): void {
         let radius = 6;
 

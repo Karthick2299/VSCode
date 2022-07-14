@@ -1,0 +1,9 @@
+class Linkedlist{
+
+    push(value){
+
+        
+
+    }
+
+}

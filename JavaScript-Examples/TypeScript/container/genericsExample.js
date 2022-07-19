@@ -2,10 +2,49 @@
 // interface genericInterface<T, U>{
 //     process(key: T, val: U): void;
 // }
-var bossDetails = function (boss) {
-    if (boss.__typeName === "official") {
-        return "".concat(boss.name, ", ").concat(boss.age);
-    }
-    return "".concat(boss.name, ", ").concat(boss.title);
-};
-console.log(bossDetails);
+// class generic_Class<T, U> implements genericInterface<T,U>{
+//     process(key: T, value: U): void{
+//         console.log(`key value is : ${key}, value is : ${value}`);
+//     }
+// }
+// let pro: genericInterface<number, string> = new generic_Class();
+// pro.process(1, "karthick");
+//Discriminated Union Example in Ts
+// type Official = {
+//     __typeName : "official";
+//     name: string;
+//     age: number;
+// }
+// type Monarch = {
+//     __typeName : "Monarch";
+//     name: string;
+//     title: string;
+// }
+// type Boss = Official | Monarch;
+// const bossDetails = (boss: Boss): string => {
+//     if(boss.__typeName === "official"){
+//         return  `${boss.name}, ${boss.age}`;
+//     }
+//     return `${boss.name}, ${boss.title}`;
+// }
+// console.log(bossDetails);
+//generic example in Ts
+// function getArray<T>(items: T[]){
+//     return new Array<T>().concat(items);
+// }
+// let myNumArray = getArray<number>([10,20,30]);
+// let myStrArray = getArray<string>(["hello","hi"]);
+// myNumArray.push(80);
+// myStrArray.push("wow");
+// console.log(myNumArray);
+// console.log(myStrArray);
+//generic example 2 
+function createArray(value_1, value_2) {
+    return [value_1, value_2];
+}
+var func_1 = createArray("hello", 3);
+var func_2 = createArray(2, 2);
+var func_3 = createArray(3, "Steffi");
+console.log(func_1);
+console.log(func_2);
+console.log(func_3);

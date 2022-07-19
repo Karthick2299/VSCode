@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin:2rem;
+    width:30vw;
+    height:30vh;
+    background: lightblue;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+form{
+    display: flex;
+    /* align-items: center;*/
+    margin:auto;
+    text-align: left;
+    flex-direction: column;
+    width:20vw;
+    height:20vh;
+    margin-top: 2rem;
+    /* background: black; */
+}
+input[type = "text"],
+#btn_s, #btn_d{
+    width:12rem;
+    margin-top: 1rem;
+}

@@ -75,10 +75,16 @@ function getRandom(checkFirst,checkSecond) {
   // value += randomNumber;
   if(checkFirst === 1){
   currentPlayerScoreOne += randomNum;
+  if(currentPlayerScoreOne >= 100){
+    throw new Error("Invalid Input");
+  }
   console.log("currentPlayerOneScore " + currentPlayerScoreOne);
   }
   if(checkSecond === 2){
     currentPlayerScoreTwo += randomNum;
+    if(currentPlayerScoreOne >= 100){
+      throw new Error("Invalid Input");
+    }
     console.log("currentPlayerTwoScore " + currentPlayerScoreTwo);
   }
   
@@ -118,6 +124,14 @@ function conditionFunction(randomNumber, firstPlayer, secondPlayer) {
 
         // checkToRemoveClass(currentPlayerOne);
       }
+
+      switch(firstPlayer){
+        case 4: 
+            
+      }
+
+
+      
     } 
      
      if (secondPlayer >= 2){
@@ -181,7 +195,7 @@ function firstPlayer() {
     console.log( "playerOne Score " + currentPlayerOne);
 
     //display the player
-    player.innerHTML = currentPlayerOne;
+    player.innerHTML = 1;
 
   //call the conditionFunction
   conditionFunction(checkPlayerOne);
@@ -197,6 +211,7 @@ function secondPlayer() {
     
   var checkSecond;
   var checkPlayerTwo = 2;
+  player.innerHTML = 2;
   //calling getRandom function
   // var playerTwo = getRandom(secondPlayer);
   var randomSecond = getRandom(checkSecond);

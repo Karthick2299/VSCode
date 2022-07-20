@@ -167,13 +167,31 @@ class LinkedList{
         return temp;
     }
 
+    reverse(){
+        let temp = this.head;
+        this.head = this.tail;
+        this.tail = this.head;
+
+        let next = temp.next;
+        let prev = null;
+
+        for(let i = 0; i < this.length; i++){
+            next = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = next;
+        }
+
+        return this;
+    }
+
 }
 
 
 
 
 
-const myLinkedList = new LinkedList(3);
+const myLinkedList = new LinkedList(1);
 //calling push method
 
 // myLinkedList.push(25);
@@ -181,9 +199,9 @@ const myLinkedList = new LinkedList(3);
 // myLinkedList.push(1);
 // myLinkedList.push(5);
 
-myLinkedList.push(10);
-
+myLinkedList.push(2);
+myLinkedList.push(3);
 //calling pop method
 
-myLinkedList.pop(5);
-myLinkedList.unshift(12);
+// myLinkedList.pop(5);
+// myLinkedList.unshift(12);

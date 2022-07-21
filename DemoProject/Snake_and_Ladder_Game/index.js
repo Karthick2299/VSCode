@@ -12,8 +12,10 @@ var divTagNine = document.querySelector(".nineth-block");
 var divTagTen = document.querySelector(".ten-block");
 var mainDiv = document.querySelector(".main-number-section");
 var player = document.getElementById("display-player");
+var hundread = document.getElementById("100");
 //button Tag
-var buttonTag = document.querySelector("button");
+var buttonTagone = document.querySelector(".btn-1");
+var buttonTagTwo = document.querySelector(".btn-2");
 //active class
 var activeClass = document.querySelector(".active");
 
@@ -71,13 +73,14 @@ function getRandom(checkFirst, checkSecond) {
   console.log("get Return variable " + randomNum);
 
   // value += randomNumber;
-  if (checkFirst === 1) {
+  if (checkFirst === 1) { 
 
      currentPlayerScoreOne += randomNum;
     // if (currentPlayerScoreOne > 100) {
     //   throw new Error("Invalid Input");
     // }
     FirstPlayerConditionFunction(randomNum, checkFirst);
+    
     console.log("currentPlayerOneScore " + currentPlayerScoreOne);
 
 
@@ -87,7 +90,10 @@ function getRandom(checkFirst, checkSecond) {
     }
 
   }
-  if (checkSecond === 2) {
+
+
+
+   if (checkSecond === 2) {
     currentPlayerScoreTwo += randomNum;
     // if (currentPlayerScoreOne > 100) {
     //   throw new Error("Invalid Input");
@@ -108,6 +114,8 @@ function getRandom(checkFirst, checkSecond) {
 
 //condition function
 
+//*first player function
+
 function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
   try {
     let total = 100;
@@ -123,23 +131,16 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
           .siblings()
           .removeClass("active-1");
 
-          switch(firstPlayer){
-            case 4:
-              currentPlayerOne = 14;
-              break;
-    
-          }
-        if (currentPlayerOne + randomNumber >= 90) {
-          Math.floor(Math.random() * 1 + 1);
-        }
-
         console.log("first player condition is working.");
-
-        // checkToRemoveClass(currentPlayerOne);
       }
 
+      
+      
     }
-
+    
+    if((hundread.contains(firstPlayer)) || currentPlayerOne >= 100){
+      document.getElementById("show-winning").innerHTML = "1 Won";
+    }
     
     // callingSwitchCase(currentPlayerOne);
   } catch (error) {
@@ -148,7 +149,10 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
   // return newInputVariable;
 }
 
+//*second Player function
+
 function SecondPlayerConditionFunction(randomNumber, secondPlayer){
+  try{
   if (secondPlayer === 2) {
     if (
       currentPlayerTwo !== randomNumber ||
@@ -159,15 +163,20 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer){
         .siblings()
         .removeClass("active-2");
 
-      if (currentPlayerTwo + randomNumber >= 90) {
-        Math.floor(Math.random() * 1 + 1);
-      }
-
       console.log("second player condition is working.");
 
       // checkToRemoveClass(currentPlayerTwo);
     }
+
+    
   }
+  if((hundread.contains(secondPlayer)) || currentPlayerTwo >= 100){
+    document.getElementById("show-winning").innerHTML = "2 Won";
+  }
+}
+catch(error){
+  console.log(error);
+}
 
 }
 
@@ -207,8 +216,10 @@ function firstPlayer() {
   //display the player
   player.innerHTML = 1;
 
+  
+
   //call the conditionFunction
-  FirstPlayerConditionFunction(checkPlayerOne);
+  // FirstPlayerConditionFunction(checkPlayerOne);
 
   //printing random numbers
   // return playerOneRandom;
@@ -228,7 +239,8 @@ function secondPlayer() {
   currentPlayerTwo += randomSecond;
   //call the conditionFunction
   console.log("second player score " + currentPlayerTwo);
-  SecondPlayerConditionFunction(checkPlayerTwo);
+
+  // SecondPlayerConditionFunction(checkPlayerTwo);
 
   //printing random numbers
 }

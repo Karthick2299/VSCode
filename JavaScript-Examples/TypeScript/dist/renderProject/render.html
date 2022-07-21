@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render HTML Document</title>
+    <link rel="stylesheet" href="../renderProject/style-render.css">
+    <!-- <script src="../renderProject/render.js" defer></script> -->
+</head>
+<body>
+    
+
+    <!-- *using Template tag => Template tag is hide the content of HTML
+    *we can only see this by Render with Javascript file otherwise will not.-->
+
+    <template id="basic-template">
+
+        <form id="formTag">
+            <div class="form-username">
+                <label for="username">Username</label>
+                <input type="text"  id="username">
+            </div>
+
+            <div class="form-password">
+                <label for="passwords">Password</label>
+                <input type="password" id="password">
+            </div>
+        </form>
+
+        <div id="app"></div>
+
+    </template>
+
+</body>
+</html>

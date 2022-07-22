@@ -37,3 +37,23 @@ button{
     margin-left:1rem;
     border-radius: 6px;
 }
+.projects{
+    border: 1px solid white;
+    margin: 1rem;
+    width:80%;
+    height:20vh;
+    background: rgb(109, 109, 72);
+    display: flex;
+    justify-content: space-around;
+}
+
+.projects header{
+    border: 1px solid white;
+    margin-top: 1rem;
+    width:80%;
+    height:20%;
+    background: #000;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}

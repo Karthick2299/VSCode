@@ -56,24 +56,24 @@ function gettingRandom(randomNum) {
 
 //get Random function{
 
-function getRandom(checkFirst, checkSecond) {
+function getRandom(checkPlayer) {
   //var randomNumber = gettingRandom() - for random Number function scope.
   //  var getReturn = gettingRandom(); //function call to get random number
   
-  checkFirst = 1;
-  checkSecond = 2;
+  let checkFirst = 1;
+  let checkSecond = 2;
   let currentPlayerScoreOne = 0;
   let currentPlayerScoreTwo = 0;
   
   var randomNum = gettingRandom();
-  console.log("random number is : " + randomNum);
+  // console.log("random number is : " + randomNum);
 
   // gettingRandom();
   document.getElementById("dice-result").innerHTML = randomNum;
-  console.log("get Return variable " + randomNum);
+  // console.log("get Return variable " + randomNum);
 
   // value += randomNumber;
-  if (checkFirst === 1) { 
+  if (checkPlayer === true) { 
 
      currentPlayerScoreOne += randomNum;
     // if (currentPlayerScoreOne > 100) {
@@ -81,19 +81,17 @@ function getRandom(checkFirst, checkSecond) {
     // }
     FirstPlayerConditionFunction(randomNum, checkFirst);
     
-    console.log("currentPlayerOneScore " + currentPlayerScoreOne);
+    // console.log("currentPlayerOneScore " + currentPlayerScoreOne);
 
 
 
-    if(currentPlayerScoreOne >= 100){
+    if(currentPlayerScoreOne >= 90){
+       randomNum =  Math.floor(Math.random() * 3);
       throw new Error("max level reached");
     }
 
-  }
-
-
-
-   if (checkSecond === 2) {
+  }   
+  else {
     currentPlayerScoreTwo += randomNum;
     // if (currentPlayerScoreOne > 100) {
     //   throw new Error("Invalid Input");
@@ -101,6 +99,12 @@ function getRandom(checkFirst, checkSecond) {
     SecondPlayerConditionFunction(randomNum, checkSecond);
 
     console.log("currentPlayerTwoScore " + currentPlayerScoreTwo);
+
+
+    if(currentPlayerScoreTwo >= 100){
+      throw new Error("max level reached");
+    }
+
   }
 
   //   currentPlayerScore = 323;
@@ -138,9 +142,9 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
       
     }
     
-    if((hundread.contains(firstPlayer)) || currentPlayerOne >= 100){
-      document.getElementById("show-winning").innerHTML = "1 Won";
-    }
+    // if((hundread.contains(firstPlayer)) || currentPlayerOne >= 100){
+    //   document.getElementById("show-winning").innerHTML = "1 Won";
+    // }
     
     // callingSwitchCase(currentPlayerOne);
   } catch (error) {
@@ -170,9 +174,9 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer){
 
     
   }
-  if((hundread.contains(secondPlayer)) || currentPlayerTwo >= 100){
-    document.getElementById("show-winning").innerHTML = "2 Won";
-  }
+  // if((hundread.contains(secondPlayer)) || currentPlayerTwo >= 100){
+  //   document.getElementById("show-winning").innerHTML = "2 Won";
+  // }
 }
 catch(error){
   console.log(error);
@@ -198,16 +202,13 @@ catch(error){
 //Player One
 
 function firstPlayer() {
-  var checkFirst;
+  var checkPlayer = true;
 
   var checkPlayerOne = 1;
 
   console.log("first player function called");
 
-  // var onePlayer;
-  //calling getRandom function
-  // var playerOneRandom = getRandom();
-  var random = getRandom(checkFirst);
+  var random = getRandom(checkPlayer, buttonTagone);
   document.getElementById("dice-result").innerHTML = random;
 
   currentPlayerOne += random;
@@ -216,25 +217,19 @@ function firstPlayer() {
   //display the player
   player.innerHTML = 1;
 
-  
 
-  //call the conditionFunction
-  // FirstPlayerConditionFunction(checkPlayerOne);
-
-  //printing random numbers
-  // return playerOneRandom;
 }
 //Player Two
 
 function secondPlayer() {
   console.log("second player function called");
 
-  var checkSecond;
+  var checkPlayer;
   var checkPlayerTwo = 2;
   player.innerHTML = 2;
   //calling getRandom function
   // var playerTwo = getRandom(secondPlayer);
-  var randomSecond = getRandom(checkSecond);
+  var randomSecond = getRandom(checkPlayer);
   document.getElementById("dice-result").innerHTML = randomSecond;
   currentPlayerTwo += randomSecond;
   //call the conditionFunction

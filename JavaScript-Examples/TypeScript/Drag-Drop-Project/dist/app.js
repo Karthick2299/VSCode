@@ -1,4 +1,4 @@
-//autobind decorator
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6,21 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 function autobind(_, _2, descriptor) {
-    var originalMethod = descriptor.value;
-    var adjDescriptor = {
+    let originalMethod = descriptor.value;
+    const adjDescriptor = {
         configurable: true,
-        get: function () {
-            var boundFn = originalMethod.bind(this);
+        get() {
+            const boundFn = originalMethod.bind(this);
             return boundFn;
         }
     };
     return adjDescriptor;
 }
-var ProjectInput = /** @class */ (function () {
-    function ProjectInput() {
+class ProjectInput {
+    constructor() {
         this.templateElement = document.getElementById("project-input");
         this.hostElement = document.getElementById("app");
-        var importedNode = document.importNode(this.templateElement.content, true);
+        const importedNode = document.importNode(this.templateElement.content, true);
         this.element = importedNode.firstElementChild;
         this.element.id = "user-input";
         this.configure();
@@ -29,10 +29,10 @@ var ProjectInput = /** @class */ (function () {
         this.descriptionInputElement = document.querySelector("#description");
         this.peopleInputElement = document.querySelector("#people");
     }
-    ProjectInput.prototype.gatherUserInput = function () {
-        var enteredTitle = this.titleInputElement.value;
-        var enteredDescription = this.descriptionInputElement.value;
-        var enteredPeople = this.peopleInputElement.value;
+    gatherUserInput() {
+        const enteredTitle = this.titleInputElement.value;
+        const enteredDescription = this.descriptionInputElement.value;
+        const enteredPeople = this.peopleInputElement.value;
         if (enteredTitle.trim().length === 0 ||
             enteredDescription.trim().length === 0 ||
             enteredPeople.trim().length === 0) {
@@ -42,25 +42,24 @@ var ProjectInput = /** @class */ (function () {
         else {
             return [enteredTitle, enteredDescription, +enteredPeople];
         }
-    };
-    ProjectInput.prototype.submitHandler = function (event) {
+    }
+    submitHandler(event) {
         event.preventDefault();
-        // console.log(this.titleInputElement.value);
-        var userInput = this.gatherUserInput();
+        const userInput = this.gatherUserInput();
         if (Array.isArray(userInput)) {
-            var title = userInput[0], desc = userInput[1], people = userInput[2];
+            const [title, desc, people] = userInput;
             console.log(title, desc, people);
         }
-    };
-    ProjectInput.prototype.configure = function () {
+    }
+    configure() {
         this.element.addEventListener('submit', this.submitHandler.bind(this));
-    };
-    ProjectInput.prototype.attach = function () {
+    }
+    attach() {
         this.hostElement.insertAdjacentElement("afterbegin", this.element);
-    };
-    __decorate([
-        autobind
-    ], ProjectInput.prototype, "submitHandler", null);
-    return ProjectInput;
-}());
-var pro = new ProjectInput();
+    }
+}
+__decorate([
+    autobind
+], ProjectInput.prototype, "submitHandler", null);
+const pro = new ProjectInput();
+//# sourceMappingURL=app.js.map

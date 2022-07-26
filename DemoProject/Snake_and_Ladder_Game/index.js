@@ -33,87 +33,47 @@ var getPlayerTurn = document.getElementById("display-player");
 var diceResult = document.getElementById("dice-result");
 
 var row_one = document.querySelector(".row-one");
-// console.log(row_one);
-//random function variable
 
 var selectDivTags = document.querySelectorAll(".number");
+
 //to display which player's turn
 var playerOne = document.getElementById("currentPlayerOne");
 var playerTwo = document.getElementById("currentPlayerTwo");
 var currentPlayerOne = 0;
 var currentPlayerTwo = 0;
 
-
-var randomNumber; //global variable
+var randomNumber;
 
 function gettingRandom(randomNum) {
-  // var localRandom = Math.floor(Math.random() * 6 + 1);
-  // return localRandom;
-
   randomNum = Math.floor(Math.random() * 6 + 1);
   return randomNum;
 }
 
-//get Random function{
-
 function getRandom(checkPlayer) {
-  //var randomNumber = gettingRandom() - for random Number function scope.
-  //  var getReturn = gettingRandom(); //function call to get random number
-  
   let checkFirst = 1;
   let checkSecond = 2;
-  let currentPlayerScoreOne = 0;
-  let currentPlayerScoreTwo = 0;
-  
-  var randomNum = gettingRandom();
-  // console.log("random number is : " + randomNum);
 
-  // gettingRandom();
+  let randomNum = Math.floor(Math.random() * 6 + 1);
   document.getElementById("dice-result").innerHTML = randomNum;
-  // console.log("get Return variable " + randomNum);
 
-  // value += randomNumber;
-  if (checkPlayer === true) { 
+  if (checkPlayer === true) {
+    currentPlayerOne += randomNum;
 
-     currentPlayerScoreOne += randomNum;
-    // if (currentPlayerScoreOne > 100) {
-    //   throw new Error("Invalid Input");
-    // }
-    FirstPlayerConditionFunction(randomNum, checkFirst);
-    
-    // console.log("currentPlayerOneScore " + currentPlayerScoreOne);
+    console.log(randomNum);
+    FirstPlayerConditionFunction(currentPlayerOne, checkFirst);
 
+    console.log("currentPlayerOneScore " + currentPlayerOne);
 
-
-    if(currentPlayerScoreOne >= 90){
-       randomNum =  Math.floor(Math.random() * 3);
+    if (currentPlayerOne === 100) {
       throw new Error("max level reached");
     }
+  } else {
+    currentPlayerTwo += randomNum;
 
-  }   
-  else {
-    currentPlayerScoreTwo += randomNum;
-    // if (currentPlayerScoreOne > 100) {
-    //   throw new Error("Invalid Input");
-    // }
-    SecondPlayerConditionFunction(randomNum, checkSecond);
+    SecondPlayerConditionFunction(currentPlayerTwo, checkSecond);
 
-    console.log("currentPlayerTwoScore " + currentPlayerScoreTwo);
-
-
-    if(currentPlayerScoreTwo >= 100){
-      throw new Error("max level reached");
-    }
-
+    console.log("currentPlayerTwoScore " + currentPlayerTwo);
   }
-
-  //   currentPlayerScore = 323;
-  // console.log("currentPlayerScore " + currentPlayerOne);
-  //printing random numbers
-
-  //call the conditionFunction
-
-  return randomNum;
 }
 
 //condition function
@@ -124,121 +84,327 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
   try {
     let total = 100;
     //it adds the active class to the div tags..in a incrementing order.
-
     if (firstPlayer === 1) {
       if (
         currentPlayerOne !== randomNumber ||
-        (currentPlayerOne === randomNumber && randomNumber <= total)
+        (currentPlayerOne === randomNumber && randomNumber <= total) ||
+        currentPlayerOne === total
       ) {
-        $(`#${currentPlayerOne}`)
+        $(`#${randomNumber}`)
           .addClass("active-1")
           .siblings()
           .removeClass("active-1");
 
         console.log("first player condition is working.");
+        console.log("current player one variable : " + currentPlayerOne);
+      } else if (currentPlayerOne >= total) {
+        document.getElementById("button-1").disabled = true;
+        document.getElementById("button-2").disabled = true;
+        document.getElementById("game-condition").style = "display: block";
+        document.getElementById("game-over").style = "display: block";
       }
 
-      
-      
+      //switch case for Players
+
+      switch (currentPlayerOne) {
+        //* For Ladders
+
+        case 4:
+          currentPlayerOne = 14;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 9:
+          currentPlayerOne = 31;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 21:
+          currentPlayerOne = 42;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 28:
+          currentPlayerOne = 84;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 51:
+          currentPlayerOne = 67;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 71:
+          currentPlayerOne = 91;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        //*for Snakes
+
+        case 17:
+          currentPlayerOne = 7;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 54:
+          currentPlayerOne = 34;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 62:
+          currentPlayerOne = 19;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 64:
+          console.log("gotcha")
+          currentPlayerOne = 60;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 87:
+          currentPlayerOne = 24;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 93:
+          currentPlayerOne = 73;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 95:
+          currentPlayerOne = 75;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 98:
+          currentPlayerOne = 79;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+      }
     }
-    
-    // if((hundread.contains(firstPlayer)) || currentPlayerOne >= 100){
-    //   document.getElementById("show-winning").innerHTML = "1 Won";
-    // }
-    
-    // callingSwitchCase(currentPlayerOne);
   } catch (error) {
     console.log(error);
   }
-  // return newInputVariable;
 }
 
 //*second Player function
 
-function SecondPlayerConditionFunction(randomNumber, secondPlayer){
-  try{
-  if (secondPlayer === 2) {
-    if (
-      currentPlayerTwo !== randomNumber ||
-      (currentPlayerTwo === randomNumber && randomNumber <= total)
-    ) {
-      $(`#${currentPlayerTwo}`)
-        .addClass("active-2")
-        .siblings()
-        .removeClass("active-2");
+function SecondPlayerConditionFunction(randomNumber, secondPlayer) {
+  let total = 100;
+  try {
+    if (secondPlayer === 2) {
+      if (
+        currentPlayerTwo !== randomNumber ||
+        (currentPlayerTwo === randomNumber && randomNumber <= total)
+      ) {
+        $(`#${randomNumber}`)
+          .addClass("active-2")
+          .siblings()
+          .removeClass("active-2");
 
-      console.log("second player condition is working.");
+        console.log("second player condition is working.");
+      } else if (currentPlayerTwo >= total) {
+        document.getElementById("button-1").disabled = true;
+        document.getElementById("button-2").disabled = true;
+        document.getElementById("game-condition").style = "display: block";
+        document.getElementById("game-over").style = "display: block";
+      }
 
-      // checkToRemoveClass(currentPlayerTwo);
+      //switch case for Second Player
+
+      switch (currentPlayerOne) {
+        //* For Ladders
+
+        case 4:
+          currentPlayerOne = 14;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 9:
+          currentPlayerOne = 31;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 21:
+          currentPlayerOne = 42;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 28:
+          currentPlayerOne = 84;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 51:
+          currentPlayerOne = 67;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 71:
+          currentPlayerOne = 91;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        //*for Snakes
+
+        case 17:
+          currentPlayerOne = 7;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 54:
+          currentPlayerOne = 34;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 62:
+          currentPlayerOne = 19;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 64:
+          console.log("gotcha")
+          currentPlayerOne = 60;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 87:
+          currentPlayerOne = 24;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 93:
+          currentPlayerOne = 73;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 95:
+          currentPlayerOne = 75;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+
+        case 98:
+          currentPlayerOne = 79;
+          $(`#${currentPlayerOne}`)
+            .addClass("active-1")
+            .siblings()
+            .removeClass("active-1");
+          break;
+      }
+
+
     }
-
-    
+  } catch (error) {
+    console.log(error);
   }
-  // if((hundread.contains(secondPlayer)) || currentPlayerTwo >= 100){
-  //   document.getElementById("show-winning").innerHTML = "2 Won";
-  // }
 }
-catch(error){
-  console.log(error);
-}
-
-}
-
-//calling getRandom function
-// buttonTag.addEventListener("click", getRandom);
-
-//need to fix this
-
-// function checkToRemoveClass(player){
-//     if (player > 10) {
-//         if(firstRow.classList.contains("active")){
-//             $("#row-one").toggleClass("active");
-//             console.log("nested if is working");
-//         }
-//       }
-// }
-//}
 
 //Player One
 
 function firstPlayer() {
   var checkPlayer = true;
 
-  var checkPlayerOne = 1;
-
   console.log("first player function called");
 
-  var random = getRandom(checkPlayer, buttonTagone);
-  document.getElementById("dice-result").innerHTML = random;
+  var random = getRandom(checkPlayer);
 
-  currentPlayerOne += random;
   console.log("playerOne Score " + currentPlayerOne);
 
   //display the player
   player.innerHTML = 1;
-
-
 }
+
 //Player Two
 
 function secondPlayer() {
   console.log("second player function called");
 
-  var checkPlayer;
-  var checkPlayerTwo = 2;
+  var checkPlayer = false;
   player.innerHTML = 2;
-  //calling getRandom function
-  // var playerTwo = getRandom(secondPlayer);
+
   var randomSecond = getRandom(checkPlayer);
-  document.getElementById("dice-result").innerHTML = randomSecond;
-  currentPlayerTwo += randomSecond;
-  //call the conditionFunction
+
   console.log("second player score " + currentPlayerTwo);
-
-  // SecondPlayerConditionFunction(checkPlayerTwo);
-
-  //printing random numbers
 }
-
-// firstPlayer();
-// secondPlayer();

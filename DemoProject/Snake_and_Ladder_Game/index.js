@@ -1,40 +1,8 @@
-//Getting Input Variables
-var firstRow = document.querySelector(".row-one");
-var divTagOne = document.querySelector(".first-block");
-var divTagTwo = document.querySelector(".second-block");
-var divTagThree = document.querySelector(".third-block");
-var divTagFour = document.querySelector(".fourth-block");
-var divTagFive = document.querySelector(".fifth-block");
-var divTagSix = document.querySelector(".sixth-block");
-var divTagSeven = document.querySelector(".seventh-block");
-var divTagEight = document.querySelector(".eighth-block");
-var divTagNine = document.querySelector(".nineth-block");
-var divTagTen = document.querySelector(".ten-block");
-var mainDiv = document.querySelector(".main-number-section");
-var player = document.getElementById("display-player");
-var hundread = document.getElementById("100");
-//button Tag
-var buttonTagone = document.querySelector(".btn-1");
-var buttonTagTwo = document.querySelector(".btn-2");
-//active class
-var activeClass = document.querySelector(".active");
-
-//icon id
-
-var MovingIcon = document.getElementById("move-icon");
-
-//icon class
-var iconClass = document.querySelector(".icon");
-
 //get Players
 var getPlayerTurn = document.getElementById("display-player");
 
 //result of dice.
-var diceResult = document.getElementById("dice-result");
-
-var row_one = document.querySelector(".row-one");
-
-var selectDivTags = document.querySelectorAll(".number");
+var diceResult = document.getElementById("dice-result"); 
 
 //to display which player's turn
 var playerOne = document.getElementById("currentPlayerOne");
@@ -42,12 +10,10 @@ var playerTwo = document.getElementById("currentPlayerTwo");
 var currentPlayerOne = 0;
 var currentPlayerTwo = 0;
 
-var randomNumber;
-
-function gettingRandom(randomNum) {
-  randomNum = Math.floor(Math.random() * 6 + 1);
-  return randomNum;
-}
+// function gettingRandom(randomNum) {
+//   randomNum = Math.floor(Math.random() * 6 + 1);
+//   return randomNum;
+// }
 
 function getRandom(checkPlayer) {
   let checkFirst = 1;
@@ -57,22 +23,30 @@ function getRandom(checkPlayer) {
   document.getElementById("dice-result").innerHTML = randomNum;
 
   if (checkPlayer === true) {
-    currentPlayerOne += randomNum;
+    if (currentPlayerOne + randomNum <= 100) {
+      currentPlayerOne += randomNum;
 
-    console.log(randomNum);
-    FirstPlayerConditionFunction(currentPlayerOne, checkFirst);
+      if (currentPlayerOne === 100) {
+        document.getElementById("show-winning").innerHTML = "1 won";
+        document.getElementById("button-2").disabled = true;
+      }
 
-    console.log("currentPlayerOneScore " + currentPlayerOne);
+      FirstPlayerConditionFunction(currentPlayerOne, checkFirst);
 
-    if (currentPlayerOne === 100) {
-      throw new Error("max level reached");
+      console.log("currentPlayerOneScore " + currentPlayerOne);
     }
   } else {
-    currentPlayerTwo += randomNum;
+    if (currentPlayerTwo + randomNum <= 100) {
+      currentPlayerTwo += randomNum;
 
-    SecondPlayerConditionFunction(currentPlayerTwo, checkSecond);
+      SecondPlayerConditionFunction(currentPlayerTwo, checkSecond);
 
-    console.log("currentPlayerTwoScore " + currentPlayerTwo);
+      if (currentPlayerTwo === 100) {
+        document.getElementById("show-winning").innerHTML = "2 Won";
+        document.getElementById("button-1").disabled = true;
+      }
+      console.log("currentPlayerTwoScore " + currentPlayerTwo);
+    }
   }
 }
 
@@ -85,11 +59,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
     let total = 100;
     //it adds the active class to the div tags..in a incrementing order.
     if (firstPlayer === 1) {
-      if (
-        currentPlayerOne !== randomNumber ||
-        (currentPlayerOne === randomNumber && randomNumber <= total) ||
-        currentPlayerOne === total
-      ) {
+      if (randomNumber <= total) {
         $(`#${randomNumber}`)
           .addClass("active-1")
           .siblings()
@@ -97,7 +67,9 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
 
         console.log("first player condition is working.");
         console.log("current player one variable : " + currentPlayerOne);
-      } else if (currentPlayerOne >= total) {
+      }
+      //condition for disabling the buttons when its reached the score 100
+      else if (currentPlayerOne >= total) {
         document.getElementById("button-1").disabled = true;
         document.getElementById("button-2").disabled = true;
         document.getElementById("game-condition").style = "display: block";
@@ -176,6 +148,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
           break;
 
         case 62:
+          console.log("Gotcha");
           currentPlayerOne = 19;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -184,7 +157,8 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
           break;
 
         case 64:
-          console.log("gotcha")
+          console.log("Gotcha");
+          console.log("gotcha");
           currentPlayerOne = 60;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -193,6 +167,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
           break;
 
         case 87:
+          console.log("Gotcha");
           currentPlayerOne = 24;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -201,6 +176,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
           break;
 
         case 93:
+          console.log("Gotcha");
           currentPlayerOne = 73;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -249,132 +225,130 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer) {
       } else if (currentPlayerTwo >= total) {
         document.getElementById("button-1").disabled = true;
         document.getElementById("button-2").disabled = true;
+        //for displaying Game Over Block
         document.getElementById("game-condition").style = "display: block";
         document.getElementById("game-over").style = "display: block";
       }
 
       //switch case for Second Player
 
-      switch (currentPlayerOne) {
+      switch (currentPlayerTwo) {
         //* For Ladders
 
         case 4:
-          currentPlayerOne = 14;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 14;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 9:
-          currentPlayerOne = 31;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 31;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 21:
-          currentPlayerOne = 42;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 42;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 28:
-          currentPlayerOne = 84;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 84;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 51:
-          currentPlayerOne = 67;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 67;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 71:
-          currentPlayerOne = 91;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 91;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         //*for Snakes
 
         case 17:
-          currentPlayerOne = 7;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 7;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 54:
-          currentPlayerOne = 34;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 34;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 62:
-          currentPlayerOne = 19;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 19;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 64:
-          console.log("gotcha")
-          currentPlayerOne = 60;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 60;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 87:
-          currentPlayerOne = 24;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 24;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 93:
-          currentPlayerOne = 73;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 73;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 95:
-          currentPlayerOne = 75;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 75;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
 
         case 98:
-          currentPlayerOne = 79;
-          $(`#${currentPlayerOne}`)
-            .addClass("active-1")
+          currentPlayerTwo = 79;
+          $(`#${currentPlayerTwo}`)
+            .addClass("active-2")
             .siblings()
-            .removeClass("active-1");
+            .removeClass("active-2");
           break;
       }
-
-
     }
   } catch (error) {
     console.log(error);
@@ -388,12 +362,12 @@ function firstPlayer() {
 
   console.log("first player function called");
 
-  var random = getRandom(checkPlayer);
+  getRandom(checkPlayer);
 
   console.log("playerOne Score " + currentPlayerOne);
 
   //display the player
-  player.innerHTML = 1;
+  getPlayerTurn.innerHTML = 1;
 }
 
 //Player Two
@@ -402,9 +376,9 @@ function secondPlayer() {
   console.log("second player function called");
 
   var checkPlayer = false;
-  player.innerHTML = 2;
+  getPlayerTurn.innerHTML = 2;
 
-  var randomSecond = getRandom(checkPlayer);
+  getRandom(checkPlayer);
 
   console.log("second player score " + currentPlayerTwo);
 }

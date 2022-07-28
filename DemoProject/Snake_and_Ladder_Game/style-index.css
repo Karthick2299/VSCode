@@ -41,7 +41,7 @@ body{
     margin:2rem 0 0 2rem;
     width:40rem;
     height:40rem;
-    background-color: rgb(84, 82, 82);
+    background-color: rgb(75, 75, 75);
     /* background: transparent; */
     position: absolute;
     top:0;
@@ -91,13 +91,13 @@ body{
 
 .active-1{
     background: url("./images/chess-piece.png") center/contain;
-    background-color: white;
+    background-color: gray;
     
 }
 
 .active-2{
     background: url("./images/pawn.png") center/contain;
-    background-color: white;
+    background-color: transparent;
 }
 
 
@@ -242,4 +242,11 @@ body{
     display: none;
        
 }
-
+#playerTurn{
+    background: #000;
+    width:100%;
+    height:12vh;
+    /* display: none;ß */
+    position: relative; 
+    color:white;  
+}

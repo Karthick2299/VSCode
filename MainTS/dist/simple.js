@@ -1,3 +1,6 @@
+// import _ from 'lodash';
+// declare var globalVariable: any;
+// console.log(globalVariable);
 export function simpleFunction() {
     console.log("from simpleFunction");
 }

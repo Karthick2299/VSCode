@@ -31,7 +31,7 @@ function getRandom(checkPlayer) {
         document.getElementById("button-2").disabled = true;
       }
 
-      FirstPlayerConditionFunction(currentPlayerOne, checkFirst);
+      FirstPlayerConditionFunction(currentPlayerOne, checkFirst,randomNum);
 
       console.log("currentPlayerOneScore " + currentPlayerOne);
     }
@@ -39,7 +39,7 @@ function getRandom(checkPlayer) {
     if (currentPlayerTwo + randomNum <= 100) {
       currentPlayerTwo += randomNum;
 
-      SecondPlayerConditionFunction(currentPlayerTwo, checkSecond);
+      SecondPlayerConditionFunction(currentPlayerTwo, checkSecond, randomNum);
 
       if (currentPlayerTwo === 100) {
         document.getElementById("show-winning").innerHTML = "2 Won";
@@ -54,7 +54,7 @@ function getRandom(checkPlayer) {
 
 //*first player function
 
-function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
+function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom) {
   try {
     let total = 100;
     //it adds the active class to the div tags..in a incrementing order.
@@ -74,6 +74,17 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
         document.getElementById("button-2").disabled = true;
         document.getElementById("game-condition").style = "display: block";
         document.getElementById("game-over").style = "display: block";
+      }
+
+
+      //player turn stays when the number is 6
+      console.log(`checks the random number ${checkingRandom}`);
+      if(checkingRandom === 6){
+        document.getElementById("turn").innerHTML = " 1 ";
+        document.getElementById("button-2").disabled = true;
+      }
+      else{
+        document.getElementById("button-2").disabled = false;
       }
 
       //switch case for Players
@@ -208,7 +219,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer) {
 
 //*second Player function
 
-function SecondPlayerConditionFunction(randomNumber, secondPlayer) {
+function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom) {
   let total = 100;
   try {
     if (secondPlayer === 2) {
@@ -228,6 +239,16 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer) {
         //for displaying Game Over Block
         document.getElementById("game-condition").style = "display: block";
         document.getElementById("game-over").style = "display: block";
+      }
+
+
+      //player turn stays when the number is 6
+      console.log(`checks the random number ${checkingRandom}`);
+      if(checkingRandom === 6){
+        document.getElementById("button-1").disabled = true;
+      }
+      else{
+        document.getElementById("button-1").disabled = false;
       }
 
       //switch case for Second Player

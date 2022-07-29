@@ -65,7 +65,7 @@ function FirstPlayerConditionFunction(
         // console.log("current player one variable : " + currentPlayerOne);
       }
       //condition for disabling the buttons when its reached the score 100
-      else if (currentPlayerOne >= total) {
+      if (currentPlayerOne === total) {
         document.getElementById("button-1").disabled = true;
         document.getElementById("button-2").disabled = true;
         document.getElementById("game-condition").style = "display: block";

@@ -2,18 +2,10 @@
 var getPlayerTurn = document.getElementById("display-player");
 
 //result of dice.
-var diceResult = document.getElementById("dice-result"); 
+var diceResult = document.getElementById("dice-result");
 
-//to display which player's turn
-var playerOne = document.getElementById("currentPlayerOne");
-var playerTwo = document.getElementById("currentPlayerTwo");
 var currentPlayerOne = 0;
 var currentPlayerTwo = 0;
-
-// function gettingRandom(randomNum) {
-//   randomNum = Math.floor(Math.random() * 6 + 1);
-//   return randomNum;
-// }
 
 function getRandom(checkPlayer) {
   let checkFirst = 1;
@@ -31,9 +23,9 @@ function getRandom(checkPlayer) {
         document.getElementById("button-2").disabled = true;
       }
 
-      FirstPlayerConditionFunction(currentPlayerOne, checkFirst,randomNum);
+      FirstPlayerConditionFunction(currentPlayerOne, checkFirst, randomNum);
 
-      console.log("currentPlayerOneScore " + currentPlayerOne);
+      // console.log("currentPlayerOneScore " + currentPlayerOne);
     }
   } else {
     if (currentPlayerTwo + randomNum <= 100) {
@@ -45,7 +37,7 @@ function getRandom(checkPlayer) {
         document.getElementById("show-winning").innerHTML = "2 Won";
         document.getElementById("button-1").disabled = true;
       }
-      console.log("currentPlayerTwoScore " + currentPlayerTwo);
+      // console.log("currentPlayerTwoScore " + currentPlayerTwo);
     }
   }
 }
@@ -54,7 +46,11 @@ function getRandom(checkPlayer) {
 
 //*first player function
 
-function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom) {
+function FirstPlayerConditionFunction(
+  randomNumber,
+  firstPlayer,
+  checkingRandom
+) {
   try {
     let total = 100;
     //it adds the active class to the div tags..in a incrementing order.
@@ -65,8 +61,8 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
           .siblings()
           .removeClass("active-1");
 
-        console.log("first player condition is working.");
-        console.log("current player one variable : " + currentPlayerOne);
+        // console.log("first player condition is working.");
+        // console.log("current player one variable : " + currentPlayerOne);
       }
       //condition for disabling the buttons when its reached the score 100
       else if (currentPlayerOne >= total) {
@@ -79,12 +75,11 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
       //to show the turn of the First Player
       document.getElementById("turn").innerHTML = " 1 ";
       //player turn stays when the number is 6
-      console.log(`checks the random number ${checkingRandom}`);
-      if(checkingRandom === 6){
+      // console.log(`checks the random number ${checkingRandom}`);
+      if (checkingRandom === 6) {
         document.getElementById("turn").innerHTML = " 1 ";
         document.getElementById("button-2").disabled = true;
-      }
-      else{
+      } else {
         document.getElementById("turn").innerHTML = " 2 ";
         document.getElementById("button-2").disabled = false;
         document.getElementById("button-1").disabled = true;
@@ -162,7 +157,6 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
           break;
 
         case 62:
-          console.log("Gotcha");
           currentPlayerOne = 19;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -171,8 +165,6 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
           break;
 
         case 64:
-          console.log("Gotcha");
-          console.log("gotcha");
           currentPlayerOne = 60;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -181,7 +173,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
           break;
 
         case 87:
-          console.log("Gotcha");
+       
           currentPlayerOne = 24;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -190,7 +182,7 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
           break;
 
         case 93:
-          console.log("Gotcha");
+       
           currentPlayerOne = 73;
           $(`#${currentPlayerOne}`)
             .addClass("active-1")
@@ -222,7 +214,11 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
 
 //*second Player function
 
-function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom) {
+function SecondPlayerConditionFunction(
+  randomNumber,
+  secondPlayer,
+  checkingRandom
+) {
   let total = 100;
   try {
     if (secondPlayer === 2) {
@@ -235,7 +231,7 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom
           .siblings()
           .removeClass("active-2");
 
-        console.log("second player condition is working.");
+        // console.log("second player condition is working.");
       } else if (currentPlayerTwo >= total) {
         document.getElementById("button-1").disabled = true;
         document.getElementById("button-2").disabled = true;
@@ -244,15 +240,12 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom
         document.getElementById("game-over").style = "display: block";
       }
 
-
       //player turn stays when the number is 6
-      console.log(`checks the random number ${checkingRandom}`);
-      if(checkingRandom === 6){
-
+      // console.log(`checks the random number ${checkingRandom}`);
+      if (checkingRandom === 6) {
         document.getElementById("turn").innerHTML = " 2 ";
         document.getElementById("button-1").disabled = true;
-      }
-      else{
+      } else {
         document.getElementById("turn").innerHTML = " 1 ";
         document.getElementById("button-1").disabled = false;
         document.getElementById("button-2").disabled = true;
@@ -388,11 +381,11 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom
 function firstPlayer() {
   var checkPlayer = true;
 
-  console.log("first player function called");
+  // console.log("first player function called");
 
   getRandom(checkPlayer);
 
-  console.log("playerOne Score " + currentPlayerOne);
+  // console.log("playerOne Score " + currentPlayerOne);
 
   //display the player
   getPlayerTurn.innerHTML = 1;
@@ -401,12 +394,12 @@ function firstPlayer() {
 //Player Two
 
 function secondPlayer() {
-  console.log("second player function called");
+  // console.log("second player function called");
 
   var checkPlayer = false;
   getPlayerTurn.innerHTML = 2;
 
   getRandom(checkPlayer);
 
-  console.log("second player score " + currentPlayerTwo);
+  // console.log("second player score " + currentPlayerTwo);
 }

@@ -41,8 +41,8 @@ body{
     margin:2rem 0 0 2rem;
     width:40rem;
     height:40rem;
-    background-color: rgb(75, 75, 75);
-    /* background: transparent; */
+    /* background-color: rgb(75, 75, 75); */
+    background: transparent;
     position: absolute;
     top:0;
 

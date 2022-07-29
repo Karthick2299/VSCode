@@ -76,7 +76,8 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
         document.getElementById("game-over").style = "display: block";
       }
 
-
+      //to show the turn of the First Player
+      document.getElementById("turn").innerHTML = " 1 ";
       //player turn stays when the number is 6
       console.log(`checks the random number ${checkingRandom}`);
       if(checkingRandom === 6){
@@ -84,7 +85,9 @@ function FirstPlayerConditionFunction(randomNumber, firstPlayer, checkingRandom)
         document.getElementById("button-2").disabled = true;
       }
       else{
+        document.getElementById("turn").innerHTML = " 2 ";
         document.getElementById("button-2").disabled = false;
+        document.getElementById("button-1").disabled = true;
       }
 
       //switch case for Players
@@ -245,10 +248,14 @@ function SecondPlayerConditionFunction(randomNumber, secondPlayer,checkingRandom
       //player turn stays when the number is 6
       console.log(`checks the random number ${checkingRandom}`);
       if(checkingRandom === 6){
+
+        document.getElementById("turn").innerHTML = " 2 ";
         document.getElementById("button-1").disabled = true;
       }
       else{
+        document.getElementById("turn").innerHTML = " 1 ";
         document.getElementById("button-1").disabled = false;
+        document.getElementById("button-2").disabled = true;
       }
 
       //switch case for Second Player

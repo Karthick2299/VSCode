@@ -1,6 +1,7 @@
 const { resolve } = require("path");
 const path = require("path");
 const { Extension } = require("typescript");
+const { CleanPlugin } = require("webpack");
 
 module.exports = {
 
@@ -21,5 +22,8 @@ module: {
 
 resolve: {
     extensions: [".ts"]
-}
+},
+plugins: [
+    new CleanPlugin.CleanWebpackPlugin()
+]
 };

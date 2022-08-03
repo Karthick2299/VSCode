@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:30%;
+    height:30%;
+    background: pink;
+    border: 1px solid black;
+}
+.button{
+    margin-top:1rem;
+}
+.btn{
+    width:8rem;
+    height:3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.redColor{
+    background-color: red;
+}

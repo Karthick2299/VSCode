@@ -1,59 +1,29 @@
-<!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe Game</title>
-    <link rel="stylesheet" href="style-index.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital@1&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-
-
-</head>
-<body>
-    
-    <section class="main-section">
-
-    <p id="instructions">
-        Game starts by Tap on Box <br>
-        <b>First Player as Player X <br>
-        Second Player as Player o</b>
-    </p>
-
-    <div class="input-fields">
-        <div class="row_one">
-            <input type="text" id="b1" onclick="myFunction_3(); myFunction()" readonly>
-            <input type="text" id="b2" onclick="myFunction_4(); myFunction()" readonly>
-            <input type="text" id="b3" onclick="myFunction_5(); myFunction()" readonly>
-        </div>
-    <br><br>
-        <div class="row_two">
-            <input type="text" id="b4" onclick="myFunction_6(); myFunction()" readonly>
-            <input type="text" id="b5" onclick="myFunction_7(); myFunction()" readonly>
-            <input type="text" id="b6" onclick="myFunction_8(); myFunction()" readonly>
-        </div>
-    <br><br>
-        <div class="row_three">
-            <input type="text" id="b7" onclick="myFunction_9(); myFunction()" readonly>
-            <input type="text" id="b8" onclick="myFunction_10(); myFunction()" readonly>
-            <input type="text" id="b9" onclick="myFunction_11(); myFunction()" readonly>
-        </div>
-</div>
-    
-    <br><br>
-    
-    <button id="button" onclick="myFunction_2()">RESET</button>
-
-    <br><br>
-
-    <p id="print"></p>
-</section>
-
-
-    <script src="index.js"></script>
-</body>
-</html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./style-index.css" />
+      <title>Tic-Tac-Toe</title>
+    </head>
+    <body>
+      <h1 class="game-title">tic tac toe game</h1>
+      <div class="container-1">
+        <div class="box" id="box1" onclick="boxes(1)"></div>
+        <div class="box" id="box2" onclick="boxes(2)"></div>
+        <div class="box" id="box3" onclick="boxes(3)"></div>
+        <div class="box" id="box4" onclick="boxes(4)"></div>
+        <div class="box" id="box5" onclick="boxes(5)"></div>
+        <div class="box" id="box6" onclick="boxes(6)"></div>
+        <div class="box" id="box7" onclick="boxes(7)"></div>
+        <div class="box" id="box8" onclick="boxes(8)"></div>
+        <div class="box" id="box9" onclick="boxes(9)"></div>
+      </div>
+      <div class="container">
+        <button id="turn">Play</button>
+      </div>
+      <button onclick="replay()">Restart</button>
+      <script src="./index.js"></script>
+    </body>
+  </html>

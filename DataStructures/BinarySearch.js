@@ -27,5 +27,5 @@ if(iterativeFunction(array, target, 0, array.length-1)){
     document.write("Element Found");
 }
 else{
-    document.write("Element not Found")
+    document.write("Element not Found ")
 }

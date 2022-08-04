@@ -113,6 +113,7 @@ function Winner_Boxes(samebox_1, samebox_2, samebox_3) {
   samebox_2.classList.add("win");
   samebox_3.classList.add("win");
   turn.innerHTML = samebox_1.innerHTML + " Won";
+  
 }
 function replay() {
   location.reload();
